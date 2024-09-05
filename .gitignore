@@ -1,0 +1,16 @@
+.DS_Store
+node_modules
+.idea/
+resources/
+themes/
+public/
+
+# Yarn Berry
+yarn-error.log
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

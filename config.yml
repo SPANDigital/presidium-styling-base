@@ -1,0 +1,19 @@
+module:
+  mounts:
+    - source: static
+      target: static
+    - source: assets
+      target: assets
+outputformats:
+  navigation:
+    basename: navigation
+    mediatype: text/javascript
+  Compendium:
+    baseName: compendium
+    mediaType: application/json
+outputs:
+  home:
+    - Navigation
+    - Compendium
+params:
+  favicon: images/favicon.ico
