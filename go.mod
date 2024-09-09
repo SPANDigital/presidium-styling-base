@@ -1,3 +1,3 @@
-module github.com/SPANDigital/presidium-styling-base
+module github.com/spandigital/presidium-styling-base
 
 go 1.23.0
