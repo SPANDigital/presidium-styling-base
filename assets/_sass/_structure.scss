@@ -431,6 +431,7 @@
     width: 100%;
   }
 
+
   table {
     @extend .table;
     @extend.table-striped;
@@ -471,4 +472,13 @@
     grid-template-columns: 1fr 9fr;
     grid-gap: 32px;
   }
+}
+
+.global-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ebebeb;
+  padding: 10px;
+  text-align: center;
 }
