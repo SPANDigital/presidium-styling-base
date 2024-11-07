@@ -17,3 +17,5 @@ outputs:
     - Compendium
 params:
   favicon: images/favicon.ico
+  moduletype: styling
+
