@@ -4,9 +4,11 @@ body::after {
   height: 0;
   overflow: hidden;
   z-index: -1; // hide images
-  content: url('assets/svg/loading-spinner.svg') url('assets/svg/loading-spinner-editor.svg')
-    url('assets/svg/icon-alert.png') url('assets/svg/plus.svg') url('assets/svg/trash.svg')
-    url('assets/svg/plus-white.svg') url('assets/svg/trash-white.svg');
+  content: url("assets/svg/loading-spinner.svg")
+    url("assets/svg/loading-spinner-editor.svg")
+    url("assets/svg/icon-alert.png") url("assets/svg/plus.svg")
+    url("assets/svg/trash.svg") url("assets/svg/plus-white.svg")
+    url("assets/svg/trash-white.svg");
 }
 
 @media (min-width: 651px) {
@@ -19,7 +21,7 @@ body::after {
   margin-right: 0;
 }
 
-.cdx-quote [contentEditable='true'][data-placeholder]::before {
+.cdx-quote [contentEditable="true"][data-placeholder]::before {
   display: none;
 }
 
@@ -53,7 +55,7 @@ body::after {
 
 .editor-spinner {
   position: absolute;
-  background-image: url('assets/svg/loading-spinner-editor.svg');
+  background-image: url("assets/svg/loading-spinner-editor.svg");
   background-repeat: no-repeat;
   top: 1px;
   left: -25px;
@@ -136,7 +138,7 @@ body::after {
 }
 
 .popup-tick {
-  background-image: url('assets/svg/icon-check.png');
+  background-image: url("assets/svg/icon-check.png");
   background-repeat: no-repeat;
   top: 0;
   left: 0;
@@ -145,7 +147,7 @@ body::after {
 }
 
 .popup-spinner {
-  background-image: url('assets/svg/loading-spinner.svg');
+  background-image: url("assets/svg/loading-spinner.svg");
   background-repeat: no-repeat;
   top: 0;
   left: 0;
@@ -174,7 +176,7 @@ body::after {
 .popup-alert {
   @extend .popup-alert-spacer;
 
-  background-image: url('assets/svg/icon-alert.png');
+  background-image: url("assets/svg/icon-alert.png");
   background-size: 20px 20px;
   background-repeat: no-repeat;
   margin: auto 0;
@@ -189,7 +191,6 @@ body::after {
     margin-bottom: auto;
     color: grey;
   }
-
 
   .dropdown {
     .dropdown__control {
