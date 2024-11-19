@@ -109,22 +109,9 @@
   }
 
   #presidium-content {
-    margin: 40px auto 0 auto;
-    height: 100%;
-    width: calc(100% - (144px * 0.25));
-
-    @media (min-width: $screen-md) {
-      width: calc(100% - (144px * 0.5));
-    }
-    @media (min-width: $screen-lg) {
-      width: calc(100% - (144px * 1));
-    }
-    @media (min-width: $screen-xlg) {
-      width: calc(100% - (144px * 2));
-    }
-    @media (min-width: $screen-xxlg) {
-      width: calc(100% - (144px * 3));
-    }
+    padding: 40px 40px 0 40px;
+    width: 100%;
+    min-width: 375px;
 
     section {
       #no-content-warning {
@@ -474,9 +461,9 @@
 }
 
 .global-footer {
-  position: fixed; 
-  bottom: 0; 
-  left: 0; 
+  position: fixed;
+  bottom: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
   background-color: $color-grey-3;
