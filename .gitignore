@@ -4,6 +4,8 @@ node_modules
 resources/
 themes/
 public/
+.hugo_build.lock
+go.sum
 
 # Yarn Berry
 yarn-error.log
