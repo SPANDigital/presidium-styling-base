@@ -1,4 +1,5 @@
 module:
+  _merge: shallow
   mounts:
     - source: static
       target: static
