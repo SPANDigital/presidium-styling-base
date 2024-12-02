@@ -43,16 +43,16 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-size-base:          14px !default;
-$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+$font-size-base: 14px;
+$font-size-large: 16px;
+$font-size-small: 10px;
 
-$font-size-h1: 29px !default;
-$font-size-h2: 24px !default;
-$font-size-h3: 20px !default;
-$font-size-h4: 18px !default;
-$font-size-h5: 15px !default;
-$font-size-h6: $font-size-base !default;
+$font-size-h1: 36px;
+$font-size-h2: 30px;
+$font-size-h3: 26px;
+$font-size-h4: 22px;
+$font-size-h5: 18px;
+$font-size-h6: 16px;
 
 //** Unit-less `line-height` for use in components like buttons.
 $line-height-base:        1.428571429 !default; // 20/14
