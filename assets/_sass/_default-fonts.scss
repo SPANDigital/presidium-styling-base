@@ -1,16 +1,88 @@
-html,
-body {
-  font-family: $primary-font-family !important;
-}
+html {
+  font-size: $presidium-typography-html-font-size !important;
 
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace !important;
-  position: relative;
+  body {
+    font-family: $presidium-typography-base-font-family;
+    font-weight: $presidium-typography-base-font-weight;
+    line-height: $presidium-typography-base-line-height;
+    font-size: $presidium-typography-base-font-size;
+    letter-spacing: $presidium-typography-base-letter-spacing;
+    color: $presidium-typography-base-color;
 
-  span {
-    font-family: monospace !important;
+    @media (max-width: 992px) {
+      font-family: $presidium-typography-mobile-font-family;
+      font-weight: $presidium-typography-mobile-font-weight;
+      line-height: $presidium-typography-mobile-line-height;
+      font-size: $presidium-typography-mobile-font-size;
+      letter-spacing: $presidium-typography-mobile-letter-spacing;
+    }
+
+    h1 {
+      font-family: $presidium-typography-h1-font-family;
+      font-weight: $presidium-typography-h1-font-weight;
+      line-height: $presidium-typography-h1-line-height;
+      font-size: $presidium-typography-h1-font-size;
+      letter-spacing: $presidium-typography-h1-letter-spacing;
+    }
+
+    h2 {
+      font-family: $presidium-typography-h2-font-family;
+      font-weight: $presidium-typography-h2-font-weight;
+      line-height: $presidium-typography-h2-line-height;
+      font-size: $presidium-typography-h2-font-size;
+      letter-spacing: $presidium-typography-h2-letter-spacing;
+    }
+
+    h3 {
+      font-family: $presidium-typography-h3-font-family;
+      font-weight: $presidium-typography-h3-font-weight;
+      line-height: $presidium-typography-h3-line-height;
+      font-size: $presidium-typography-h3-font-size;
+      letter-spacing: $presidium-typography-h3-letter-spacing;
+    }
+
+    h4 {
+      font-family: $presidium-typography-h4-font-family;
+      font-weight: $presidium-typography-h4-font-weight;
+      line-height: $presidium-typography-h4-line-height;
+      font-size: $presidium-typography-h4-font-size;
+      letter-spacing: $presidium-typography-h4-letter-spacing;
+    }
+
+    h5 {
+      font-family: $presidium-typography-h5-font-family;
+      font-weight: $presidium-typography-h5-font-weight;
+      line-height: $presidium-typography-h5-line-height;
+      font-size: $presidium-typography-h5-font-size;
+      letter-spacing: $presidium-typography-h5-letter-spacing;
+    }
+
+    h6 {
+      font-family: $presidium-typography-h6-font-family;
+      font-weight: $presidium-typography-h6-font-weight;
+      line-height: $presidium-typography-h6-line-height;
+      font-size: $presidium-typography-h6-font-size;
+      letter-spacing: $presidium-typography-h6-letter-spacing;
+    }
+
+    .presidium-typography-small-text {
+      font-family: $presidium-typography-small-font-family;
+      font-weight: $presidium-typography-small-font-weight;
+      line-height: $presidium-typography-small-line-height;
+      font-size: $presidium-typography-small-font-size;
+      letter-spacing: $presidium-typography-small-letter-spacing;
+    }
+
+    code,
+    kbd,
+    pre,
+    samp {
+      font-family: monospace;
+      position: relative;
+
+      span {
+        font-family: monospace;
+      }
+    }
   }
 }
