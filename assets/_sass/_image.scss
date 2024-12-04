@@ -33,7 +33,7 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, 85%);
 
-  @media (max-width: $grid-float-breakpoint) {
+  @media (max-width: $screen-md) {
     margin-top: 55px;
     padding-top: 55px;
   }
@@ -43,7 +43,7 @@
     top: 15px;
     right: 6%;
 
-    @media (max-width: $grid-float-breakpoint) {
+    @media (max-width: $screen-md) {
       margin-top: 55px;
       top: 15px;
     }
@@ -72,7 +72,7 @@
     padding: 10px;
     background-color: white;
 
-    @media (max-width: $grid-float-breakpoint) {
+    @media (max-width: $screen-md) {
       max-width: 200%;
     }
   }
