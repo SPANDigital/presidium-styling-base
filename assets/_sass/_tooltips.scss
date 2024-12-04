@@ -2,20 +2,20 @@
 
 /* Misc. */
 $tooltip-cursor: help;
-$tooltip-text-color: $text-color;
+$tooltip-text-color: $gray-dark;
 $tooltip-box-shadow: 0 0 5px 5px rgba(218, 218, 218, 100%);
 $tooltip-animation: all 0.3s ease-in-out;
 $tooltip-hover-delay: 1s;
 $tooltip-y-overflow: auto;
-$tooltip-background: $popover-bg;
+$tooltip-background: $white;
 
 /* Tooltip term styling. */
 $tooltip-border-bottom-color: $brand-primary;
 $tooltip-border-bottom-line: 1px dashed;
 
 /* Height and width. */
-$tooltip-max-height: $popover-max-width;
-$tooltip-width: $popover-max-width;
+$tooltip-max-height: $screen-xs;
+$tooltip-width: $screen-xs;
 
 /* Triangle styles. */
 $tooltip-triangle-border-top: 8px solid #fff;
