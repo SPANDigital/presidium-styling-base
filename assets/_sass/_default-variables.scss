@@ -29,45 +29,91 @@ $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
 $navbar-default-bg: #eee !default;
 $border: #dadada;
 
-
-
-//== Typography
-//
+// Typography //
 //## Font, line-height, and color for body text, headings, and more.
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap';
 
-// Fonts
-$primary-font-family: 'Open Sans' !default; 
+$presidium-typography-html-font-size: 16px !default;
+// Base
+$presidium-typography-base-font-family: 'Open Sans' !default;
+$presidium-typography-base-font-weight: 400 !default;
+$presidium-typography-base-line-height: 18px !default;
+$presidium-typography-base-font-size: 13px !default;
+$presidium-typography-base-letter-spacing: 0 !default;
+$presidium-typography-base-color: $black !default;
 
-$font-size-base: 14px;
-$font-size-large: 16px;
-$font-size-small: 10px;
+// h1
+$presidium-typography-h1-font-family: $presidium-typography-base-font-family !default;
+$presidium-typography-h1-font-weight: 700 !default;
+$presidium-typography-h1-line-height: 41px !default;
+$presidium-typography-h1-font-size: 34px !default;
+$presidium-typography-h1-letter-spacing: $presidium-typography-base-letter-spacing !default;
+$presidium-typography-h1-color: $presidium-typography-base-color !default;
 
-$font-size-h1: 34px;
-$font-size-h2: 30px;
-$font-size-h3: 26px;
-$font-size-h4: 22px;
-$font-size-h5: 18px;
-$font-size-h6: 16px;
+// h2
+$presidium-typography-h2-font-family: $presidium-typography-base-font-family !default;
+$presidium-typography-h2-font-weight: 700 !default;
+$presidium-typography-h2-line-height: 32px !default;
+$presidium-typography-h2-font-size: 28px !default;
+$presidium-typography-h2-letter-spacing: $presidium-typography-base-letter-spacing !default;
+$presidium-typography-h2-color: $presidium-typography-base-color !default;
 
-//** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429 !default; // 20/14
+// h3
+$presidium-typography-h3-font-family: $presidium-typography-base-font-family !default;
+$presidium-typography-h3-font-weight: 700 !default;
+$presidium-typography-h3-line-height: 28px !default;
+$presidium-typography-h3-font-size: 20px !default;
+$presidium-typography-h3-letter-spacing: $presidium-typography-base-letter-spacing !default;
+$presidium-typography-h3-color: $presidium-typography-base-color !default;
+
+// h4
+$presidium-typography-h4-font-family: $presidium-typography-base-font-family !default;
+$presidium-typography-h4-font-weight: 600 !default;
+$presidium-typography-h4-line-height: 24px !default;
+$presidium-typography-h4-font-size: 17px !default;
+$presidium-typography-h4-letter-spacing: $presidium-typography-base-letter-spacing !default;
+$presidium-typography-h4-color: $presidium-typography-base-color !default;
+
+// h5
+$presidium-typography-h5-font-family: $presidium-typography-base-font-family !default;
+$presidium-typography-h5-font-weight: 600 !default;
+$presidium-typography-h5-line-height: 20px !default;
+$presidium-typography-h5-font-size: 15px !default;
+$presidium-typography-h5-letter-spacing: $presidium-typography-base-letter-spacing !default;
+$presidium-typography-h5-color: $presidium-typography-base-color !default;
+
+// h6
+$presidium-typography-h6-font-family: $presidium-typography-base-font-family !default;
+$presidium-typography-h6-font-weight: 600 !default;
+$presidium-typography-h6-line-height: 19px !default;
+$presidium-typography-h6-font-size: 14px !default;
+$presidium-typography-h6-letter-spacing: $presidium-typography-base-letter-spacing !default;
+$presidium-typography-h6-color: $presidium-typography-base-color !default;
+
+// Small
+$presidium-typography-small-font-family: $presidium-typography-base-font-family !default;
+$presidium-typography-small-font-weight: $presidium-typography-base-font-weight !default;
+$presidium-typography-small-line-height: 16px !default;
+$presidium-typography-small-font-size: 12px !default;
+$presidium-typography-small-letter-spacing: $presidium-typography-base-letter-spacing !default;
+$presidium-typography-small-color: $presidium-typography-base-color !default;
+
+// Mobile
+$presidium-typography-mobile-font-family: $presidium-typography-base-font-family !default;
+$presidium-typography-mobile-font-weight: $presidium-typography-base-font-weight !default;
+$presidium-typography-mobile-line-height: 20px !default;
+$presidium-typography-mobile-font-size: 15px !default;
+$presidium-typography-mobile-letter-spacing: $presidium-typography-base-letter-spacing !default;
+$presidium-typography-mobile-color: $presidium-typography-base-color !default;
+
+// ??? //
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
-
-//** By default, this inherits from the `<body>`.
-$headings-font-family:    inherit !default;
-$headings-font-weight:    500 !default;
-$headings-line-height:    1.1 !default;
-$headings-color:          inherit !default;
-
+$line-height-computed:    floor(($presidium-typography-base-font-size * $presidium-typography-base-line-height)) !default; // ~20px
 $padding-base-vertical: 8px !default;
 $padding-base-horizontal: 12px !default;
-$line-height-computed: floor(
-  ($font-size-base * $line-height-base)
-) !default; // ~20px
 
 $input-height-base: (
-  $line-height-computed + ($padding-base-vertical * 2) + 2
+  $presidium-typography-base-line-height + ($padding-base-vertical * 2) + 2
 ) !default;
 
 // Include glyphicons (remove this when bootstrap dependency is removed)
