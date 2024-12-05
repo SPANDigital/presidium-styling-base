@@ -150,6 +150,12 @@
             }
           }
         }
+
+        .permalink {
+          margin-left: 8px;
+          margin-top: 8px;
+          align-self: flex-start;
+        }
       }
 
       .article-status {
@@ -471,3 +477,22 @@
   padding: 10px;
   text-align: center;
 }
+
+.toaster {
+  top: 0px;
+  position: fixed;
+  z-index: 1000;
+  opacity: 0;
+  transition-property: opacity, top;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+
+  &.show{
+    top: 40px;
+  }
+
+  .popup-text {
+    white-space: nowrap;
+  }
+}
+
