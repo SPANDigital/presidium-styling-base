@@ -363,7 +363,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
         overflow: hidden;
 
         a {
-          color: $averageGray;
+          color: $navbar-default-link-color;
         }
       }
     }
