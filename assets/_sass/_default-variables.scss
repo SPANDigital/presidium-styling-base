@@ -2,11 +2,14 @@
 $brand-primary: #e49134 !default;
 $brand-info: #eb9110;
 $brand-tint: rgba(254, 178, 70, 1);
+$navbar-default-link-color: #777 !default;
 $navbar-default-link-hover-color: $brand-info;
 $navbar-default-link-hover-bg: white;
 $link-color: #e49134;
 
 // Custom colors
+$white: #fff;
+$black: #000;
 $color-grey: #555;
 $color-grey-2: #777;
 $color-grey-3: #bbb;
@@ -17,6 +20,7 @@ $color-green: #84a93f;
 $color-blue: #4586cd;
 $color-red: #e52213;
 $color-dark-grey: #3d3d3d;
+
 
 // Extracted from spacelab theme:
 // Colors
@@ -35,7 +39,7 @@ $border: #dadada;
 
 $presidium-typography-html-font-size: 16px !default;
 // Base
-$presidium-typography-base-font-family: 'Open Sans' !default;
+$presidium-typography-base-font-family: proxima-nova !default;
 $presidium-typography-base-font-weight: 400 !default;
 $presidium-typography-base-line-height: 18px !default;
 $presidium-typography-base-font-size: 13px !default;
@@ -125,3 +129,5 @@ $screen-lg: 1200px !default;
 $screen-xlg: 1400px !default;
 // Extra Extra Large screen / wide desktop
 $screen-xxlg: 1800px !default;
+
+
