@@ -39,7 +39,7 @@
     flex-grow: 1;
 
     .toggle {
-      @media (min-width: $grid-float-breakpoint) {
+      @media (min-width: $screen-md) {
         display: none;
       }
 
@@ -132,7 +132,7 @@
         margin-bottom: 12px;
         padding-top: 12px;
 
-        @media (max-width: $grid-float-breakpoint) {
+        @media (max-width: $screen-md) {
           max-width: calc(100vw - 120px);
         }
 
@@ -420,26 +420,44 @@
   }
 
   table {
-    @extend .table;
-    @extend.table-striped;
-    @extend.table-bordered;
-
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: 1px solid #ddd;
     white-space: normal !important;
+  }
 
-    th {
-      vertical-align: top !important;
-    }
+  table th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top !important;
+    border-top: 1px solid #ddd;
+  }
+
+  table td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+  }
+
+  table tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
   }
 
   blockquote {
-    @extend .well;
-
-    font-size: inherit;
+    padding: 2px 4px;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
   }
 
   ul,
   ol {
-    margin-bottom: ($line-height-computed / 2);
+    margin-bottom: ($presidium-typography-base-line-height / 2);
 
     ul,
     ol {
