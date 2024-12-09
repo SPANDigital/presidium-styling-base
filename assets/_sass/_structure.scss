@@ -39,7 +39,7 @@
     flex-grow: 1;
 
     .toggle {
-      @media (min-width: $screen-md) {
+      @media (min-width: $grid-float-breakpoint) {
         display: none;
       }
 
@@ -132,7 +132,7 @@
         margin-bottom: 12px;
         padding-top: 12px;
 
-        @media (max-width: $screen-md) {
+        @media (max-width: $grid-float-breakpoint) {
           max-width: calc(100vw - 120px);
         }
 
@@ -420,44 +420,26 @@
   }
 
   table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 20px;
-    background-color: transparent;
-    border: 1px solid #ddd;
+    @extend .table;
+    @extend.table-striped;
+    @extend.table-bordered;
+
     white-space: normal !important;
-  }
 
-  table th {
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top !important;
-    border-top: 1px solid #ddd;
-  }
-
-  table td {
-    padding: 8px;
-    line-height: 1.42857143;
-    vertical-align: top;
-    border-top: 1px solid #ddd;
-  }
-
-  table tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
+    th {
+      vertical-align: top !important;
+    }
   }
 
   blockquote {
-    padding: 2px 4px;
-    color: #c7254e;
-    background-color: #f9f2f4;
-    border-radius: 4px;
+    @extend .well;
+
+    font-size: inherit;
   }
 
   ul,
   ol {
-    margin-bottom: ($presidium-typography-base-line-height / 2);
+    margin-bottom: ($line-height-computed / 2);
 
     ul,
     ol {
