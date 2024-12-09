@@ -81,7 +81,7 @@
 #presidium-container {
   flex-basis: 0;
   flex-grow: 999;
-  color: $gray-darker;
+  color: $primary-font-color;
 
   .row {
     display: flex;
@@ -97,7 +97,49 @@
   h5,
   h6,
   p {
-    color: $gray-darker;
+    color: $primary-font-color;
+  }
+
+  h1 {
+    font-family: $headings-font-family !important;
+    font-weight: $presidium-typography-h1-font-weight !important;
+    line-height: $presidium-typography-h1-line-height !important;
+    font-size: $presidium-typography-h1-font-size !important;
+  }
+
+  h2 {
+    font-family: $headings-font-family !important;
+    font-weight: $presidium-typography-h2-font-weight !important;
+    line-height: $presidium-typography-h2-line-height !important;
+    font-size: $presidium-typography-h2-font-size !important;
+  }
+
+  h3 {
+    font-family: $headings-font-family !important;
+    font-weight: $presidium-typography-h3-font-weight !important;
+    line-height: $presidium-typography-h3-line-height !important;
+    font-size: $presidium-typography-h3-font-size !important;
+  }
+
+  h4 {
+    font-family: $headings-font-family !important;
+    font-weight: $presidium-typography-h4-font-weight !important;
+    line-height: $presidium-typography-h4-line-height !important;
+    font-size: $presidium-typography-h4-font-size !important;
+  }
+
+  h5 {
+    font-family: $headings-font-family !important;
+    font-weight: $presidium-typography-h5-font-weight !important;
+    line-height: $presidium-typography-h5-line-height !important;
+    font-size: $presidium-typography-h5-font-size !important;
+  }
+
+  h6 {
+    font-family: $headings-font-family !important;
+    font-weight: $presidium-typography-h6-font-weight !important;
+    line-height: $presidium-typography-h6-line-height !important;
+    font-size: $presidium-typography-h6-font-size !important;
   }
 
   p {
@@ -165,22 +207,22 @@
         }
 
         .status-draft {
-          background-image: url('images/status-draft.png');
+          background-image: url("images/status-draft.png");
           color: $color-yellow-green;
         }
 
         .status-review {
-          background-image: url('images/status-review.png');
+          background-image: url("images/status-review.png");
           color: $color-yellow-green;
         }
 
         .status-published {
-          background-image: url('images/status-published.png');
+          background-image: url("images/status-published.png");
           color: $color-green;
         }
 
         .status-retired {
-          background-image: url('images/status-retired.png');
+          background-image: url("images/status-retired.png");
           color: $color-grey;
         }
       }
@@ -214,7 +256,7 @@
           float: right;
 
           .label {
-            background-image: url('images/role-icon.svg');
+            background-image: url("images/role-icon.svg");
             background-repeat: no-repeat;
             background-size: 25px 15px;
             background-color: unset;
@@ -266,7 +308,7 @@
             right: 100%;
             top: 50%;
             border: solid transparent;
-            content: ' ';
+            content: " ";
             height: 0;
             width: 0;
             position: absolute;
@@ -290,14 +332,14 @@
         }
 
         .edit-icon {
-          background-image: url('assets/svg/edit-icon.svg');
+          background-image: url("assets/svg/edit-icon.svg");
           fill: #9a9a99;
           width: 16px;
           height: 16px;
         }
 
         .link-icon {
-          background-image: url('assets/svg/link-icon.svg');
+          background-image: url("assets/svg/link-icon.svg");
           fill: #9a9a99;
           width: 16px;
           height: 16px;
@@ -363,44 +405,44 @@
         }
 
         .presidium-pro-tip {
-          @include callout($color-orange, 'span pro tip');
+          @include callout($color-orange, "span pro tip");
         }
 
         .presidium-for-example {
-          @include callout($color-green, 'for example...');
+          @include callout($color-green, "for example...");
         }
 
         .presidium-suggested-reading {
-          @include callout($color-blue, 'suggested reading');
+          @include callout($color-blue, "suggested reading");
         }
 
         .presidium-suggested-courses {
-          @include callout($color-blue, 'suggested courses');
+          @include callout($color-blue, "suggested courses");
         }
 
         .presidium-best-practice {
-          @include callout($color-orange, 'best practice');
+          @include callout($color-orange, "best practice");
         }
 
         .presidium-warning {
-          @include callout($color-red, 'warning');
+          @include callout($color-red, "warning");
         }
 
         .presidium-prerequisite {
-          @include callout($color-yellow-green, 'prerequisite');
+          @include callout($color-yellow-green, "prerequisite");
         }
 
         .presidium-chris-says {
           background-color: #000;
           border-color: #000;
-          background-image: url('images/pentagram-symbol.svg');
+          background-image: url("images/pentagram-symbol.svg");
           color: $color-grey-2;
           background-repeat: no-repeat;
           background-position: top right;
           background-size: 31px;
           background-origin: content-box;
 
-          @include callout($color-grey-2, 'chris says...');
+          @include callout($color-grey-2, "chris says...");
         }
       }
     }

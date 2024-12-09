@@ -1,5 +1,6 @@
 //Core System level CSS
 @import '_sass/default-variables';
+@import '_sass/default-typography';
 @import '_sass/variables';
 @import '_sass/bootstrap/';
 @import '_sass/navbar';
@@ -12,7 +13,6 @@
 @import '_sass/home';
 
 // Enterprise level configuration
-@import '_sass/default-fonts';
 @import '_sass/custom_enterprise';
 
 // Optional custom CSS loaded last
