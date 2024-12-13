@@ -377,6 +377,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
   }
 
   .navbar-footer {
+    width: 100%;
     background-color: unset;
     flex-shrink: 0;
   }
