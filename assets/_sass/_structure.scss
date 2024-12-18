@@ -187,7 +187,7 @@
 
     .link-icon {
       background-image: url("assets/svg/link-icon.svg");
-      fill: #9a9a99;
+      fill: $gray-light;
       width: 16px;
       height: 16px;
       display: block;
@@ -370,7 +370,7 @@
 
         .edit-icon {
           background-image: url("assets/svg/edit-icon.svg");
-          fill: #9a9a99;
+          fill: $gray-light;
           width: 16px;
           height: 16px;
         }
@@ -543,7 +543,7 @@
   text-align: center;
 }
 
-.toaster {
+.toast {
   top: 0px;
   position: fixed;
   z-index: 1000;
