@@ -1,1 +1,29 @@
-// Don't remove, this file is the default
+// Brand colors
+$brand-primary: #e49134 !default;
+$brand-secondary: #eb9110 !default;
+$brand-success: #84a93f !default;
+$brand-info: #5bc0de !default;
+$brand-warning: #eb9110 !default;
+$brand-danger: #e52213 !default;
+$brand-inverse: #333 !default;
+$brand-tint: #feb246 !default;
+
+
+// Links
+$link-color: #e49134 !default;
+$link-hover-color: #eb9110 !default;
+$navbar-default-link-hover-color: $brand-info;
+$navbar-default-link-active-color: $brand-info;
+$navbar-default-bg: #eee !default;
+$navbar-default-link-hover-bg: white;
+
+
+// theme grays
+$gray-base: $color-gray-10 !default;
+$gray-darker: $color-gray-20 !default; 
+$gray-dark: $color-gray-30 !default;
+$gray: $color-gray-40  !default;
+$gray-light: $color-gray-60  !default; 
+$gray-lighter: $color-gray-70  !default; 
+
+$border: #dadada;
