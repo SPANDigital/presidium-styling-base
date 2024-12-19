@@ -511,12 +511,15 @@
   ul,
   ol {
     margin-bottom: ($line-height-computed / 2);
-
-    ul,
-    ol {
-      margin-bottom: 0;
-    }
   }
+  
+  ul {
+    padding-left: 40px;
+  }
+  
+  ol {
+    margin-bottom: 0;
+  }  
 }
 
 .archive {
