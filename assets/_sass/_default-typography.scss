@@ -1,0 +1,147 @@
+//========================================================================
+//== Typography
+//------------------------------------------------------------------------
+
+// Presidium System level Variables
+
+//## Font, line-height, and color for body text, headings, and more.
+@import "https://fonts.googleapis.com/css2?family=Open+Sans&display=swap";
+
+// Base
+$prsdm-typography-default-font-color: $color-grey-1 !default;
+$prsdm-typography-base-font-family: "Open Sans" !default;
+$prsdm-typography-base-font-weight: 400 !default;
+$prsdm-typography-base-line-height: 18px !default;
+$prsdm-typography-base-font-size: 13px !default;
+$prsdm-typography-base-letter-spacing: 0 !default;
+$prsdm-typography-base-color: $prsdm-typography-default-font-color !default;
+$prsdm-typography-html-font-size: 16px !default;
+
+// Headings
+$headings-font-family: $prsdm-typography-base-font-family !default;
+$prsdm-typography-heading-strong-font-weight: 600 !default;
+$prsdm-typography-heading-medium-font-weight: 500 !default;
+$prsdm-typography-heading-light-font-weight: 450 !default;
+
+// H1
+$presidium-typography-h1-line-height: 41px !default;
+$presidium-typography-h1-font-size: 34px !default;
+$presidium-typography-h1-font-weight: $prsdm-typography-heading-medium-font-weight !default;
+// H2
+$presidium-typography-h2-line-height: 32px !default;
+$presidium-typography-h2-font-size: 28px !default;
+$presidium-typography-h2-font-weight: $prsdm-typography-heading-medium-font-weight !default;
+// H3
+$presidium-typography-h3-line-height: 28px !default;
+$presidium-typography-h3-font-size: 24px !default;
+$presidium-typography-h3-font-weight: $prsdm-typography-heading-medium-font-weight !default;
+// H4
+$presidium-typography-h4-line-height: 24px !default;
+$presidium-typography-h4-font-size: 22px !default;
+$presidium-typography-h4-font-weight: $prsdm-typography-heading-medium-font-weight !default;
+// H5
+$presidium-typography-h5-line-height: 22px !default;
+$presidium-typography-h5-font-size: 20px !default;
+$presidium-typography-h5-font-weight: $prsdm-typography-heading-medium-font-weight !default;
+// H6
+$presidium-typography-h6-line-height: 20px !default;
+$presidium-typography-h6-font-size: 18px !default;
+$presidium-typography-h6-font-weight: $prsdm-typography-heading-medium-font-weight !default;
+
+// Fonts
+$primary-font-color: $prsdm-typography-default-font-color !default;
+$primary-font-family: $prsdm-typography-base-font-family !default;
+$font-size-base: $prsdm-typography-base-font-size !default;
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base: 1.428571429 !default; // 20/14
+$line-height-computed: floor(
+  ($font-size-base * $line-height-base)
+) !default; // ~20px
+$padding-base-vertical: 8px !default;
+$padding-base-horizontal: 12px !default;
+$input-height-base: (
+  $line-height-computed + ($padding-base-vertical * 2) + 2
+) !default;
+
+// Include glyphicons (remove this when bootstrap dependency is removed)
+// The icons font path needs to be loaded before bootstrap in order to work
+$icon-font-path: "assets/fonts/bootstrap/" !default;
+
+.content-wrapper {
+  .presidium-content {
+    .presidium-article-wrapper {
+      h1 .h1 {
+        font-family: $headings-font-family !important;
+        font-weight: $presidium-typography-h1-font-weight !important;
+        line-height: $presidium-typography-h1-line-height !important;
+        font-size: $presidium-typography-h1-font-size !important;
+        margin-top: ($line-height-computed / 2);
+        margin-bottom: ($line-height-computed / 2);
+      }
+
+      h2 .h2 {
+        font-family: $headings-font-family !important;
+        font-weight: $presidium-typography-h2-font-weight !important;
+        line-height: $presidium-typography-h2-line-height !important;
+        font-size: $presidium-typography-h2-font-size !important;
+        margin-top: ($line-height-computed / 2);
+        margin-bottom: ($line-height-computed / 2);
+      }
+
+      h3 .h3 {
+        font-family: $headings-font-family !important;
+        font-weight: $presidium-typography-h3-font-weight !important;
+        line-height: $presidium-typography-h3-line-height !important;
+        font-size: $presidium-typography-h3-font-size !important;
+        margin-top: ($line-height-computed / 2);
+        margin-bottom: ($line-height-computed / 2);
+      }
+
+      h4 .h4 {
+        font-family: $headings-font-family !important;
+        font-weight: $presidium-typography-h4-font-weight !important;
+        line-height: $presidium-typography-h4-line-height !important;
+        font-size: $presidium-typography-h4-font-size !important;
+        margin-top: 0;
+        margin-bottom: ($line-height-computed / 2);
+      }
+
+      h5 .h5 {
+        font-family: $headings-font-family !important;
+        font-weight: $presidium-typography-h5-font-weight !important;
+        line-height: $presidium-typography-h5-line-height !important;
+        font-size: $presidium-typography-h5-font-size !important;
+        margin-top: 0;
+        margin-bottom: ($line-height-computed / 2);
+      }
+
+      h6 .h6 {
+        font-family: $headings-font-family !important;
+        font-weight: $presidium-typography-h6-font-weight !important;
+        line-height: $presidium-typography-h6-line-height !important;
+        font-size: $presidium-typography-h6-font-size !important;
+        margin-top: 0;
+        margin-bottom: ($line-height-computed / 2);
+      }
+    }
+  }
+}
+
+html,
+body {
+  font-family: $primary-font-family !important;
+  color: $primary-font-color !important;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace !important;
+  position: relative;
+
+  span {
+    font-family: monospace !important;
+  }
+}

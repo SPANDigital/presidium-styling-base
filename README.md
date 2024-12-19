@@ -1,5 +1,9 @@
 # presidium-styling-base
 
+This is the system-wide styling for Presidium.
+This repo is half of the Presidium Base Theme, with the layouts contained in [presidium-layouts-base](https://github.com/SPANDigital/presidium-layouts-base).
+
+
 ## Linting and Pre-Commit Hook Setup
 This project uses `Stylelint`, `Prettier`, and `Husky` to ensure consistent SCSS formatting and linting. A pre-commit hook is configured to automatically run linting tasks before commits.
 
