@@ -184,13 +184,13 @@ $nav-item-border: darken($navbar-default-bg, 8%);
           color: $color-dark-grey;
           width: 100%;
           margin: 0;
-          
-          h4 {
+        }
+
+        h4 {
             font-family: $headings-font-family !important;
             font-weight: $presidium-typography-h4-font-weight !important;
             line-height: $presidium-typography-h4-line-height !important;
             font-size: 18px !important;
-          }
         }
 
         .quality-category-labels {
