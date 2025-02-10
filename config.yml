@@ -17,6 +17,8 @@ outputs:
     - Navigation
     - Compendium
 params:
+  _merge: shallow
   favicon: images/favicon.ico
+  logo: images/logo.png
   moduletype: styling
 
