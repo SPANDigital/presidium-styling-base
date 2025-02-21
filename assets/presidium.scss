@@ -1,8 +1,12 @@
-//Core System level CSS
+// Core System level CSS
 @import '_sass/default-variables';
 @import '_sass/default-typography';
 @import '_sass/variables';
-@import '_sass/bootstrap/';
+@import '_sass/bootstrap/bootstrap/variables';
+.content-wrapper {
+  @import '_sass/bootstrap/bootstrap';
+  @import '../../static/assets/css/bootstrap.min.css';
+}
 @import '_sass/components/';
 @import '_sass/navbar';
 @import '_sass/structure';
