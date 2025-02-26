@@ -100,7 +100,9 @@ body::after {
 .editor-popup-panel-loading {
   @extend .editor-popup-panel;
 
-  background-color: #777;
+  background-color: #000;
+  grid-template-columns: auto auto;
+  width: 230px;
 }
 
 .editor-popup-panel-error {
