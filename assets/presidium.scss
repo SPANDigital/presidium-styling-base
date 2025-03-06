@@ -1,4 +1,4 @@
-//Core System level CSS
+// Core System level CSS
 @import '_sass/default-variables';
 @import '_sass/default-typography';
 @import '_sass/variables';
@@ -10,7 +10,7 @@
 @import '_sass/image';
 @import '_sass/syntax';
 @import '_sass/tooltips';
-@import '_sass/print';
+// @import '_sass/print';
 @import '_sass/home';
 
 // Enterprise level configuration
@@ -20,5 +20,8 @@
 @import '_sass/fonts';
 @import '_sass/custom';
 @import '_sass/local';
-@import '_sass/pdf';
+// @import '_sass/pdf';
 @import '_sass/mermaid';
+
+@import "_sass/enterprise/";
+@import "_sass/outputs/";
