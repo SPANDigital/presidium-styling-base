@@ -1,9 +1,15 @@
+// Presidium SCSS entry point
+
+@import "_sass/defaults/";
+
 // Core System level CSS
-@import '_sass/default-variables';
-@import '_sass/default-typography';
+// @import '_sass/default-variables';
+// @import '_sass/default-typography';
 @import '_sass/variables';
+
 @import '_sass/bootstrap/';
 @import '_sass/components/';
+
 @import '_sass/navbar';
 @import '_sass/structure';
 @import '_sass/editor';
@@ -11,7 +17,7 @@
 @import '_sass/syntax';
 @import '_sass/tooltips';
 // @import '_sass/print';
-@import '_sass/home';
+// @import '_sass/home';
 
 // Enterprise level configuration
 @import '_sass/custom_enterprise';
