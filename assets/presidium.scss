@@ -1,16 +1,9 @@
 // Presidium SCSS entry point
 
 @import "_sass/defaults/";
-@import '_sass/variables';
 @import '_sass/bootstrap/';
 @import '_sass/components/';
-
 @import '_sass/structure';
-
-@import '_sass/custom_enterprise';
-@import '_sass/fonts';
-@import '_sass/custom';
-@import '_sass/local';
-
 @import "_sass/enterprise/";
+@import '_sass/client-custom/';
 @import "_sass/outputs/";
