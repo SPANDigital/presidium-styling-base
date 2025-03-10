@@ -1,24 +1,9 @@
-//Core System level CSS
-@import '_sass/default-variables';
-@import '_sass/default-typography';
-@import '_sass/variables';
+// Presidium SCSS entry point
+
+@import "_sass/defaults/";
 @import '_sass/bootstrap/';
 @import '_sass/components/';
-@import '_sass/navbar';
 @import '_sass/structure';
-@import '_sass/editor';
-@import '_sass/image';
-@import '_sass/syntax';
-@import '_sass/tooltips';
-@import '_sass/print';
-@import '_sass/home';
-
-// Enterprise level configuration
-@import '_sass/custom_enterprise';
-
-// Optional custom CSS loaded last
-@import '_sass/fonts';
-@import '_sass/custom';
-@import '_sass/local';
-@import '_sass/pdf';
-@import '_sass/mermaid';
+@import "_sass/enterprise/";
+@import '_sass/client-custom/';
+@import "_sass/outputs/";
