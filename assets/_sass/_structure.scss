@@ -186,7 +186,7 @@
     }
 
     .link-icon {
-      background-image: url("assets/svg/link-icon.svg");
+      background-image: url('assets/svg/link-icon.svg');
       fill: $gray-light;
       width: 16px;
       height: 16px;
@@ -244,22 +244,22 @@
         }
 
         .status-draft {
-          background-image: url("images/status-draft.png");
+          background-image: url('images/status-draft.png');
           color: $color-yellow-green;
         }
 
         .status-review {
-          background-image: url("images/status-review.png");
+          background-image: url('images/status-review.png');
           color: $color-yellow-green;
         }
 
         .status-published {
-          background-image: url("images/status-published.png");
+          background-image: url('images/status-published.png');
           color: $color-green;
         }
 
         .status-retired {
-          background-image: url("images/status-retired.png");
+          background-image: url('images/status-retired.png');
           color: $color-grey;
         }
       }
@@ -293,7 +293,7 @@
           float: right;
 
           .label {
-            background-image: url("images/role-icon.svg");
+            background-image: url('images/role-icon.svg');
             background-repeat: no-repeat;
             background-size: 25px 15px;
             background-color: unset;
@@ -345,7 +345,7 @@
             right: 100%;
             top: 50%;
             border: solid transparent;
-            content: " ";
+            content: ' ';
             height: 0;
             width: 0;
             position: absolute;
@@ -369,7 +369,7 @@
         }
 
         .edit-icon {
-          background-image: url("assets/svg/edit-icon.svg");
+          background-image: url('assets/svg/edit-icon.svg');
           fill: $gray-light;
           width: 16px;
           height: 16px;
@@ -434,44 +434,44 @@
         }
 
         .presidium-pro-tip {
-          @include callout($color-orange, "span pro tip");
+          @include callout($color-orange, 'span pro tip');
         }
 
         .presidium-for-example {
-          @include callout($color-green, "for example...");
+          @include callout($color-green, 'for example...');
         }
 
         .presidium-suggested-reading {
-          @include callout($color-blue, "suggested reading");
+          @include callout($color-blue, 'suggested reading');
         }
 
         .presidium-suggested-courses {
-          @include callout($color-blue, "suggested courses");
+          @include callout($color-blue, 'suggested courses');
         }
 
         .presidium-best-practice {
-          @include callout($color-orange, "best practice");
+          @include callout($color-orange, 'best practice');
         }
 
         .presidium-warning {
-          @include callout($color-red, "warning");
+          @include callout($color-red, 'warning');
         }
 
         .presidium-prerequisite {
-          @include callout($color-yellow-green, "prerequisite");
+          @include callout($color-yellow-green, 'prerequisite');
         }
 
         .presidium-chris-says {
           background-color: #000;
           border-color: #000;
-          background-image: url("images/pentagram-symbol.svg");
+          background-image: url('images/pentagram-symbol.svg');
           color: $color-grey-2;
           background-repeat: no-repeat;
           background-position: top right;
           background-size: 31px;
           background-origin: content-box;
 
-          @include callout($color-grey-2, "chris says...");
+          @include callout($color-grey-2, 'chris says...');
         }
       }
     }
@@ -544,7 +544,7 @@
 }
 
 .toast {
-  top: 0px;
+  top: -50px;
   position: fixed;
   z-index: 1000;
   opacity: 0;
@@ -552,7 +552,7 @@
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
 
-  &.show{
+  &.show {
     top: 40px;
   }
 
@@ -560,4 +560,3 @@
     white-space: nowrap;
   }
 }
-

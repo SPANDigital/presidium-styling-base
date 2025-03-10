@@ -12,3 +12,9 @@
 ### Bugfix
 
 - Fixed an issue where summary tags were not displaying a dropdown arrow. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-7301
+
+## 2025-03-10
+
+### Bugfix
+
+- Fixed a bug where transparent popups were obstructing the search bar, fixed general linting and fixed the font import address. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-7459
