@@ -94,6 +94,11 @@ body::after {
     margin: auto;
   }
 
+  .popup-copy-text {
+    margin: auto;
+    font-weight: normal;
+  }
+
   grid-template-columns: 40px auto 30px;
 }
 
@@ -136,11 +141,20 @@ body::after {
 
   background-color: #000;
   grid-template-columns: 40px auto;
-  width: 197px;
+  width: auto;
 }
 
 .popup-tick {
   background-image: url("assets/svg/icon-check.png");
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.popup-copy-tick {
+  background-image: url("assets/svg/icon-validation-success.svg");
   background-repeat: no-repeat;
   top: 0;
   left: 0;

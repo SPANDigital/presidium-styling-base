@@ -1,5 +1,42 @@
 # presidium-styling-base
 
+TLDR; This is the System Level styling for Presidium.
+
+This repo makes up the `styling` portion of the Presidium System Level Theme, and contains the officially support theme features.
+For more info on Hugo Themes see the official Hugo documentation [here](https://gohugo.io/hugo-modules/theme-components/)
+
+# Getting Started
+
+### Method 1 - Just using the Presidium Themes in your Hugo site (Default)
+Update the `config.yml`:
+```
+module:
+  imports:
+  - path: github.com/spandigital/presidium-styling-base
+  - path: github.com/spandigital/presidium-layouts-base
+```
+
+### Method 2 - Working on contributing to this repo in local development.
+1. Clone the theme
+2. Clone the [presidium-test-validation](https://github.com/SPANDigital/presidium-test-validation) repo. We use the `presidium-test-validation` repo as the styling and functionality test bed, where we throw all the officially supported features in with the kitchen sink, so that we can validate every theme change has no unintended effects.
+3. Open the `go.mod` file in your `presidium-test-validation` clone.
+4. Add the following to the bottom of your `go.mod` file, and update the path after the arrow to the correct path where you cloned the theme layout:
+  ```
+  replace github.com/spandigital/presidium-styling-base => /{path-on-your-machine}/presidium-styling-base
+  ```
+5. Run a refresh and then build the docset with Hugo:
+  ```
+  make refresh
+  ```
+  If you don't have the Makefile in your docset, then you can copy it from [here](https://github.com/SPANDigital/presidium/blob/develop/templates/default/Makefile)
+  Then run
+  ```
+  make serve
+  ```
+  Your served site should be available on `localhost:1313`.
+
+---
+
 ## Linting and Pre-Commit Hook Setup
 This project uses `Stylelint`, `Prettier`, and `Husky` to ensure consistent SCSS formatting and linting. A pre-commit hook is configured to automatically run linting tasks before commits.
 
