@@ -1,0 +1,54 @@
+// Taken from Bootstrap v5.3.3
+$transition-collapse: height .35s ease !default;
+$transition-collapse-width: width .35s ease !default;
+$enable-transitions: true !default;
+$enable-reduced-motion: true !default;
+
+// Mixin renamed to `collapse_transition` to avoid conflicts with Bootstrap v3.4.1 mixin
+@mixin collapse_transition($transition...) {
+  @if length($transition) == 0 {
+    $transition: $transition-base;
+  }
+
+  @if length($transition) > 1 {
+    @each $value in $transition {
+      @if $value == null or $value == none {
+        @warn "The keyword 'none' or 'null' must be used as a single argument.";
+      }
+    }
+  }
+
+  @if $enable-transitions {
+    @if nth($transition, 1) != null {
+      transition: $transition;
+    }
+
+    @if $enable-reduced-motion and nth($transition, 1) != null and nth($transition, 1) != none {
+      @media (prefers-reduced-motion: reduce) {
+        transition: none;
+      }
+    }
+  }
+}
+
+.collapse {
+  &:not(.show) {
+    display: none;
+  }
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  @include collapse_transition($transition-collapse);
+
+  &.collapse-horizontal {
+    width: 0;
+    height: auto;
+    @include collapse_transition($transition-collapse-width);
+  }
+
+  &.show {
+    height: auto;
+  }
+}
