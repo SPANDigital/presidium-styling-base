@@ -1,6 +1,6 @@
 // These are the files the client is recommended to edit to add their own custom styling for their organization or single docset.
 
-@import "variables";
-@import "custom.scss";
-@import "custom-enterprise";
-@import "local";
+@import url('variables');
+@import url('custom');
+@import url('custom-enterprise');
+@import url('local');
