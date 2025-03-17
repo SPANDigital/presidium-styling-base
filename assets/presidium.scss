@@ -1,9 +1,9 @@
 // Presidium SCSS entry point
 
-@import "_sass/defaults/";
-@import '_sass/bootstrap/';
-@import '_sass/components/';
-@import '_sass/structure';
-@import "_sass/enterprise/";
-@import '_sass/client-custom/';
-@import "_sass/outputs/";
+@import url('_sass/defaults/');
+@import url('_sass/bootstrap/');
+@import url('_sass/components/');
+@import url('_sass/structure');
+@import url('_sass/enterprise/');
+@import url('_sass/client-custom/');
+@import url('_sass/outputs/');
