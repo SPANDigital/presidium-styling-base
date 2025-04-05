@@ -1,0 +1,38 @@
+name: OWASP Dependency Check
+
+on: [push]
+
+jobs:
+  depcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Node.js dependencies
+        run: yarn install
+
+      - name: Run Dependency Check
+        uses: dependency-check/Dependency-Check_Action@main
+        with:
+          project: 'presidium-styling-base'
+          path: '.'
+          format: 'HTML'
+          out: 'dependency-reports'
+          args: >
+            --failOnCVSS 7
+            --enableRetired
+            --disableYarnAudit
+            --enableExperimental
+
+      - name: Upload Dependency Check report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Dependency Check report
+          path: ${{ github.workspace }}/dependency-reports
