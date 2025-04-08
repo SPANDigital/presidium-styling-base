@@ -32,7 +32,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/css-parser-algorithms@npm:^3.0.4":
+"@csstools/css-parser-algorithms@npm:^3.0.1, @csstools/css-parser-algorithms@npm:^3.0.4":
   version: 3.0.4
   resolution: "@csstools/css-parser-algorithms@npm:3.0.4"
   peerDependencies:
@@ -41,10 +41,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/css-tokenizer@npm:^3.0.3":
+"@csstools/css-tokenizer@npm:^3.0.1, @csstools/css-tokenizer@npm:^3.0.3":
   version: 3.0.3
   resolution: "@csstools/css-tokenizer@npm:3.0.3"
   checksum: 6b300beba1b29c546b720887be18a40bafded5dc96550fb87d61fbc2c550e9632e7baafa2bf34a66e0f25fb6b70558ee67ef3b45856aa5e621febc2124cf5039
+  languageName: node
+  linkType: hard
+
+"@csstools/media-query-list-parser@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "@csstools/media-query-list-parser@npm:3.0.1"
+  peerDependencies:
+    "@csstools/css-parser-algorithms": ^3.0.1
+    "@csstools/css-tokenizer": ^3.0.1
+  checksum: 65d1fdb83def44de4e97898d630aba13a9c09dac18f80d4a68bd135c903973bbf81f338a41471016c3d93768bc005f3e7978977135c8e0944baba710b4d33dca
   languageName: node
   linkType: hard
 
@@ -107,6 +117,24 @@ __metadata:
     "@nodelib/fs.scandir": 2.1.5
     fastq: ^1.6.0
   checksum: 190c643f156d8f8f277bf2a6078af1ffde1fd43f498f187c2db24d35b4b4b5785c02c7dc52e356497b9a1b65b13edc996de08de0b961c32844364da02986dc53
+  languageName: node
+  linkType: hard
+
+"@stylistic/stylelint-plugin@npm:^3.0.1":
+  version: 3.1.2
+  resolution: "@stylistic/stylelint-plugin@npm:3.1.2"
+  dependencies:
+    "@csstools/css-parser-algorithms": ^3.0.1
+    "@csstools/css-tokenizer": ^3.0.1
+    "@csstools/media-query-list-parser": ^3.0.1
+    is-plain-object: ^5.0.0
+    postcss-selector-parser: ^6.1.2
+    postcss-value-parser: ^4.2.0
+    style-search: ^0.1.0
+    stylelint: ^16.8.2
+  peerDependencies:
+    stylelint: ^16.8.0
+  checksum: dad4b060cec834bed8bd85f3c31697597ae835fc64e2dca6695f26493f7003564721d9c0550dc4b3334f8c9abdf421627375639e077fb336cc97587231978e99
   languageName: node
   linkType: hard
 
@@ -393,7 +421,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-tree@npm:^3.1.0":
+"css-tree@npm:^3.0.1, css-tree@npm:^3.1.0":
   version: 3.1.0
   resolution: "css-tree@npm:3.1.0"
   dependencies:
@@ -962,6 +990,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mdn-data@npm:^2.15.0":
+  version: 2.20.0
+  resolution: "mdn-data@npm:2.20.0"
+  checksum: 66c7de9c422313f766f2ae40048c8cd301d3b694df436729dd4066c796df70f4308925468828f9a471ddc63818945b0f240bb3744f3f3480312e0b2bd38a7775
+  languageName: node
+  linkType: hard
+
 "meow@npm:^13.2.0":
   version: 13.2.0
   resolution: "meow@npm:13.2.0"
@@ -1194,6 +1229,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"postcss-scss@npm:^4.0.9":
+  version: 4.0.9
+  resolution: "postcss-scss@npm:4.0.9"
+  peerDependencies:
+    postcss: ^8.4.29
+  checksum: dc358bafc23d52ed3a9a29333808825deba213042be74ece6eae7a61c692f67d0e6691fa7005367b013c01c79562fbb9ef2fe4c0485075233931bd90715f5132
+  languageName: node
+  linkType: hard
+
 "postcss-selector-parser@npm:^6.0.11":
   version: 6.0.13
   resolution: "postcss-selector-parser@npm:6.0.13"
@@ -1201,6 +1245,16 @@ __metadata:
     cssesc: ^3.0.0
     util-deprecate: ^1.0.2
   checksum: f89163338a1ce3b8ece8e9055cd5a3165e79a15e1c408e18de5ad8f87796b61ec2d48a2902d179ae0c4b5de10fccd3a325a4e660596549b040bc5ad1b465f096
+  languageName: node
+  linkType: hard
+
+"postcss-selector-parser@npm:^6.1.2":
+  version: 6.1.2
+  resolution: "postcss-selector-parser@npm:6.1.2"
+  dependencies:
+    cssesc: ^3.0.0
+    util-deprecate: ^1.0.2
+  checksum: ce9440fc42a5419d103f4c7c1847cb75488f3ac9cbe81093b408ee9701193a509f664b4d10a2b4d82c694ee7495e022f8f482d254f92b7ffd9ed9dea696c6f84
   languageName: node
   linkType: hard
 
@@ -1319,7 +1373,7 @@ __metadata:
     stylelint: ^16.18.0
     stylelint-config-prettier: ^9.0.5
     stylelint-config-prettier-scss: ^1.0.0
-    stylelint-config-sass-guidelines: ^10.0.0
+    stylelint-config-sass-guidelines: ^12.1.0
     stylelint-config-standard: ^33.0.0
     stylelint-config-standard-scss: ^9.0.0
     stylelint-prettier: ^5.0.3
@@ -1481,6 +1535,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"style-search@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "style-search@npm:0.1.0"
+  checksum: 3cfefe335033aad6d47da0725cb48f5db91a73935954c77eab77d9e415e6668cdb406da4a4f7ef9f1aca77853cf5ba7952c45e869caa5bd6439691d88098d468
+  languageName: node
+  linkType: hard
+
 "stylelint-config-prettier-scss@npm:^1.0.0":
   version: 1.0.0
   resolution: "stylelint-config-prettier-scss@npm:1.0.0"
@@ -1531,16 +1592,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-config-sass-guidelines@npm:^10.0.0":
-  version: 10.0.0
-  resolution: "stylelint-config-sass-guidelines@npm:10.0.0"
+"stylelint-config-sass-guidelines@npm:^12.1.0":
+  version: 12.1.0
+  resolution: "stylelint-config-sass-guidelines@npm:12.1.0"
   dependencies:
-    postcss-scss: ^4.0.6
-    stylelint-scss: ^4.4.0
+    "@stylistic/stylelint-plugin": ^3.0.1
+    postcss-scss: ^4.0.9
+    stylelint-scss: ^6.2.1
   peerDependencies:
     postcss: ^8.4.21
-    stylelint: ^15.2.0
-  checksum: 1fbd55d780bc60c46ee9bdd9f2bb8097ff890791704faaaaecf6a0542250006a94d6726fd781d7fee68c831cd33093953d1f441c73b27471e76828d100446597
+    stylelint: ^16.1.0
+  checksum: 1ffcbbc9c5350981767a42bd0a16d8fe4c46dab8c6427a773064bfc7755b26f31fc5f8dc9abd4ff373c78ad28acaf55b06a7747216e8d7a5dbb6571299240a0d
   languageName: node
   linkType: hard
 
@@ -1583,7 +1645,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint-scss@npm:^4.4.0, stylelint-scss@npm:^4.6.0":
+"stylelint-scss@npm:^4.6.0":
   version: 4.7.0
   resolution: "stylelint-scss@npm:4.7.0"
   dependencies:
@@ -1597,7 +1659,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^16.18.0":
+"stylelint-scss@npm:^6.2.1":
+  version: 6.11.1
+  resolution: "stylelint-scss@npm:6.11.1"
+  dependencies:
+    css-tree: ^3.0.1
+    is-plain-object: ^5.0.0
+    known-css-properties: ^0.35.0
+    mdn-data: ^2.15.0
+    postcss-media-query-parser: ^0.2.3
+    postcss-resolve-nested-selector: ^0.1.6
+    postcss-selector-parser: ^7.1.0
+    postcss-value-parser: ^4.2.0
+  peerDependencies:
+    stylelint: ^16.0.2
+  checksum: befd240f569debd360904311e2eb508da49fddcd030d0709e1d140b088fffd5dce2bd11122eff7f4eec260f8fee0cb75901a9fea3b6c57bbf23c34150420aa8b
+  languageName: node
+  linkType: hard
+
+"stylelint@npm:^16.18.0, stylelint@npm:^16.8.2":
   version: 16.18.0
   resolution: "stylelint@npm:16.18.0"
   dependencies:
