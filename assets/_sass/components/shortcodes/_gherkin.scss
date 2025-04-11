@@ -1,0 +1,8 @@
+.gherkin-feature {
+  font-family: monospace;
+  white-space: pre; /* Maintain whitespace from Gherkin */
+}
+
+.gherkin-feature .keyword {
+  font-weight: bold;
+}
