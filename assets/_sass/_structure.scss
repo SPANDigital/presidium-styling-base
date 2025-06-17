@@ -483,6 +483,32 @@
       overflow: auto;
       word-break: break-word;
     }
+
+    .side-by-side-left {
+      float:left;
+      width:50%;
+      img {
+        margin-top: 0 !important;
+        padding-top: 0;
+      }
+    }
+
+    .side-by-side-right {
+      float:right;
+      width:50%;
+      img {
+        margin-top: 0 !important;
+        padding-top: 0;
+      }
+    }
+
+    @media screen and (max-width: $side-by-side-breakpoint-min) {
+      .side-by-side-left,
+      .side-by-side-right {
+        float: none;
+        width: 100%;
+      }
+    }
   }
 
   footer {
