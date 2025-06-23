@@ -482,6 +482,8 @@
       height: auto;
       overflow: auto;
       word-break: break-word;
+      padding-top:12px;
+      padding-bottom: 12px;
     }
 
     .side-by-side-left {
@@ -509,6 +511,7 @@
         width: 100%;
       }
     }
+
   }
 
   footer {
