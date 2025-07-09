@@ -190,6 +190,10 @@ article {
   position: relative;
   display: flex;
   flex-direction: column;
+  background-color: $primary-fill-color;
+  padding:16px;
+  margin: 8px;
+  border-radius: 8px;
 
   h3,
   p {
