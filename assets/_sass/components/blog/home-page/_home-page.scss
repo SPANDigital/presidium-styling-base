@@ -3,7 +3,7 @@
 .menu-row {
   .menu-title {
     .date {
-      color: $color-grey-2;
+      color: $secondary-font-color;
       margin: 0;
     }
   }
@@ -15,7 +15,7 @@
   }
 
   a {
-    color: black;
+    color: $primary-font-color;
     transition: 0.1s ease;
 
     &:hover,
@@ -62,23 +62,27 @@
 }
 
 .article-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
   .title {
-    color: black;
+    color: $primary-font-color;
   }
 
   .section {
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    font-weight: 700;
-    color: $color-grey-2 !important;
+    font-weight: $font-weight-bold;
+    color: $secondary-font-color !important;
   }
 
   .date {
-    color: $color-grey-2 !important;
+    color: $secondary-font-color !important;
   }
 
   .author {
-    color: $color-grey-2 !important;
+    color: $secondary-font-color !important;
     margin-bottom: 0;
   }
 
@@ -86,9 +90,15 @@
     display: flex;
     align-items: center;
   }
+
+  h3,
+  p {
+    color: $primary-font-color;
+  }
 }
 
 .image-thumbnail {
+  border-radius: 6px;
   overflow: hidden;
 
   > img {
@@ -107,7 +117,7 @@
 }
 
 ul.tags {
-  padding: 0;
+  padding: 0 !important;
   margin: 4px 0px !important;
 
   .tag {
@@ -120,13 +130,15 @@ ul.tags {
     transition: 0.2s ease;
     text-decoration: none;
     text-transform: capitalize !important;
-    color: black;
+    color: $primary-font-color;
   }
 }
 
 .article-frontmatter {
+  display: block;
+  margin: 12px auto;
   span {
-    color: black;
+    color: $primary-font-color;
   }
 }
 
@@ -155,45 +167,25 @@ article {
   }
 }
 
-.article-frontmatter {
-  display: block;
-  margin: 12px auto;
-}
-
 .hero-content {
   > p:first-of-type {
-    color: black;
+    color: $primary-font-color;
   }
 
   .section {
     font-style: normal;
     margin-bottom: 4px;
-    font-weight: 700;
+    font-weight: $font-weight-bold;
   }
 
   .title {
     font-style: normal;
-    font-weight: 400;
+    font-weight: $font-weight-regular;
     margin: 4px 0px;
   }
 
   .date {
     margin: 0;
-  }
-}
-
-.image-thumbnail {
-  border-radius: 6px;
-}
-
-.article-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  h3,
-  p {
-    color: black;
   }
 }
 
@@ -226,11 +218,11 @@ article {
   display: grid;
   grid-column-gap: 32px;
   grid-template-areas:
-    "image head"
-    "image  fmatter"
-    "image  fmatter"
-    "image  fmatter"
-    "image  fmatter";
+    'image head'
+    'image  fmatter'
+    'image  fmatter'
+    'image  fmatter'
+    'image  fmatter';
   grid-template-columns: 1fr 1fr;
 
   > svg:first-of-type {

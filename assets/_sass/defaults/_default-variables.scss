@@ -1,0 +1,38 @@
+// Font Weights
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+
+// Bootstrap & Bootswatch color overrides
+$brand-primary: #e49134 !default;
+$brand-info: #eb9110 !default;
+$brand-tint: rgba(254, 178, 70, 1) !default;
+$navbar-default-link-hover-color: $brand-info !default;
+$navbar-default-link-hover-bg: white !default;
+$link-color: #e49134 !default;
+
+// Custom colors
+$color-grey: #333 !default;
+$color-grey-1: #555 !default;
+$color-grey-2: #777 !default;
+$color-grey-3: #bbb !default;
+$color-grey-4: #f3f3f3 !default;
+$color-orange: #eb9110 !default;
+$color-yellow-green: #beb239 !default;
+$color-green: #84a93f !default;
+$color-blue: #4586cd !default;
+$color-red: #e52213 !default;
+$color-dark-grey: #3d3d3d !default;
+
+// Extracted from spacelab theme:
+// Colors
+$gray-base: #000 !default;
+$gray-darker: #555 !default; // #222
+$gray-dark: lighten($gray-base, 20%) !default; // #333
+$gray: #666 !default; // #555
+$gray-light: lighten($gray-base, 60%) !default; // #999
+$gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
+$navbar-default-bg: #eee !default;
+$border: #dadada !default;

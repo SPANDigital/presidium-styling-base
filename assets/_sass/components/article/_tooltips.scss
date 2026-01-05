@@ -47,8 +47,6 @@ $tooltip-triangle-top: -20%;
     font-style: normal;
     background: $tooltip-background;
     box-shadow: $tooltip-box-shadow;
-    box-shadow: $tooltip-box-shadow;
-    box-shadow: $tooltip-box-shadow;
     color: $tooltip-text-color;
     text-align: left;
     border-radius: 6px;
@@ -57,18 +55,11 @@ $tooltip-triangle-top: -20%;
     margin-left: -100%;
     z-index: $zindex-popover;
     transition: $tooltip-animation;
-    transition: $tooltip-animation;
-    transition: $tooltip-animation;
-    transition: $tooltip-animation;
-    transition: $tooltip-animation;
     overflow: auto;
     max-height: 76px;
   }
 
   &:hover .tooltips-text {
-    transition-delay: $tooltip-hover-delay;
-    transition-delay: $tooltip-hover-delay;
-    transition-delay: $tooltip-hover-delay;
     transition-delay: $tooltip-hover-delay;
     visibility: visible;
     overflow-y: $tooltip-y-overflow;
@@ -80,9 +71,6 @@ $tooltip-triangle-top: -20%;
     text-decoration: none;
 
     &::after {
-      transition-delay: $tooltip-hover-delay;
-      transition-delay: $tooltip-hover-delay;
-      transition-delay: $tooltip-hover-delay;
       transition-delay: $tooltip-hover-delay;
       visibility: visible;
     }
