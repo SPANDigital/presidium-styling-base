@@ -1,3 +1,3 @@
-module github.pie.apple.com/ase-docs/presidium-styling-base
+module github.com/spandigital/presidium-styling-base
 
 go 1.18
