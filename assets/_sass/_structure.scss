@@ -75,6 +75,10 @@ body {
 }
 
 #presidium-container {
+    .dark & {
+      background: black;
+    }
+
   flex-basis: 0;
   flex-grow: 999;
   color: $primary-font-color;
@@ -94,6 +98,10 @@ body {
   h6,
   p {
     color: $primary-font-color;
+
+    .dark & {
+      color: white;
+    }
   }
 
   h1 {
