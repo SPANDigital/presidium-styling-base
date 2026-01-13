@@ -1,0 +1,51 @@
+#presidium {
+  .module-title-bar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+
+    .module-title-bar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .module-title-bar-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .brand {
+      height: 28px;
+      width: 100%;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: $font-weight-medium;
+      margin: 0;
+      color: #111827;
+      line-height: 41px;
+    }
+
+    .quality-category-labels {
+      font-size: 11px;
+      padding: 2px 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      color: #374151;
+      background-color: transparent;
+      font-weight: $font-weight-medium;
+      line-height: 1.2;
+      display: inline-flex;
+      align-items: center;
+      position: relative;
+    }
+  }
+}
