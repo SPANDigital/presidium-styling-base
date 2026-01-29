@@ -194,6 +194,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
         .quality-category-labels {
           color: $color-grey-2;
           width: fit-content;
+          position: relative;
         }
       }
     }
