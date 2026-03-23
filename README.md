@@ -22,8 +22,9 @@ module:
 ### Method 2 - Contributing to this repo
 
 1. Clone the theme
-2. Clone the [presidium-test-validation](https://github.com/SPANDigital/presidium-test-validation) repo. We use the `presidium-test-validation` repo as the styling and functionality test bed, where we throw all the officially supported features in with the kitchen sink, so that we can validate every theme change has no unintended side effects on any downstream themes that import this repo.
-3. Open the `go.mod` file in your `presidium-test-validation` clone.
+2. Clone the documentation repo you are going to test the theme updates against. 
+   If you don't have a hugo module to test against, you can use the `docs` directory in the [Presidium Open Source repo](https://github.com/SPANDigital/presidium).
+3. Open the `go.mod` file in your documentation module.
 4. Add the following to the bottom of your `go.mod` file, and update the path after the arrow to the correct path where you cloned the theme layout:
 
 ```gotemplate
@@ -32,11 +33,12 @@ replace github.com/spandigital/presidium-styling-base => /{path-on-your-machine}
 
 5. Run a refresh and then build the docset with Hugo:
 
+If you don't already have a copy of the make file, then you can copy the latest version from [here](https://github.com/SPANDigital/presidium-layouts-base/blob/main/Makefile).
+
 ```shell
 make refresh
 ```
 
-If you are working in your own enterprise repo and not in the `presidium-test-validation`, then you can copy the latest version from [presidium-test-validation develop branch](https://github.com/SPANDigital/presidium-test-validation/blob/develop/Makefile)
 Then run
 
 ```shell
