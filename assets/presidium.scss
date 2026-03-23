@@ -1,9 +1,20 @@
 // Presidium SCSS entry point
 
+/*! BEGIN presidium-styling-base */
+
+/*!   assets/_sass/defaults/ */
 @import '_sass/defaults/';
+/*!   assets/_sass/bootstrap/ */
 @import '_sass/bootstrap/';
+/*!   assets/_sass/components/ */
 @import '_sass/components/';
+/*!   assets/_sass/structure.scss */
 @import '_sass/structure';
+/*!   assets/_sass/enterprise/ */
 @import '_sass/enterprise/';
+/*!   assets/_sass/client-custom/ */
 @import '_sass/client-custom/';
+/*!   assets/_sass/outputs/ */
 @import '_sass/outputs/';
+
+/*! END presidium-styling-base */

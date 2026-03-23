@@ -1,6 +1,14 @@
 // These are the files the client is recommended to edit to add their own custom styling for their organization or single docset.
 
+/*! BEGIN assets/_sass/client-custom/ */
+
+/*! assets/_sass/client-custom/_variables.scss */
 @import 'variables';
+/*! assets/_sass/client-custom/_custom.scss */
 @import 'custom';
+/*! assets/_sass/client-custom/_custom-enterprise.scss */
 @import 'custom-enterprise';
+/*! assets/_sass/client-custom/_local.scss */
 @import 'local';
+
+/*! END assets/_sass/client-custom/ */

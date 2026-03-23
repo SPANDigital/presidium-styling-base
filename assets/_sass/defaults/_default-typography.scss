@@ -9,6 +9,7 @@
 
 // Base
 $prsdm-typography-default-font-color: $color-grey-1 !default;
+$prsdm-typography-secondary-font-color: $color-grey-2 !default;
 $prsdm-typography-base-font-family: 'Open Sans' !default;
 $prsdm-typography-base-font-weight: 400 !default;
 $prsdm-typography-base-line-height: 18px !default;
@@ -50,7 +51,9 @@ $presidium-typography-h6-font-weight: $prsdm-typography-heading-medium-font-weig
 
 // Fonts
 $primary-font-color: $prsdm-typography-default-font-color !default;
+$secondary-font-color: $prsdm-typography-secondary-font-color !default;
 $primary-font-family: $prsdm-typography-base-font-family !default;
+$monospace-font-family: monospace !default;
 $font-size-base: $prsdm-typography-base-font-size !default;
 
 //** Unit-less `line-height` for use in components like buttons.
@@ -134,10 +137,10 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace !important;
+  font-family: $monospace-font-family !important;
   position: relative;
 
   span {
-    font-family: monospace !important;
+    font-family: $monospace-font-family !important;
   }
 }
