@@ -32,6 +32,10 @@
       margin: 0;
       color: #111827;
       line-height: 41px;
+      // Truncate brand name to prevent layout shift when space is constrained
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     .quality-category-labels {
