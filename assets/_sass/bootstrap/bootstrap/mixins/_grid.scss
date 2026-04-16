@@ -4,11 +4,19 @@
 
 // Centered container element
 @mixin container-fixed($gutter: $grid-gutter-width) {
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 12px;
+  margin-left: 12px;
   padding-left:  floor(($gutter / 2));
   padding-right: ceil(($gutter / 2));
   @include clearfix;
+
+  @media (min-width: $screen-md-min) {
+    margin: 0 20px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    margin: 0 32px;
+  }
 }
 
 // Creates a wrapper for a series of columns
