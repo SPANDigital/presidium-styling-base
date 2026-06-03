@@ -112,8 +112,9 @@ $nav-item-border: darken($navbar-default-bg, 8%);
         > .link > a {
           color: $brand-primary;
 
-          .glyphicon {
+          .menu-expander-icon {
             color: $color-grey;
+            transform: rotate(90deg);
           }
         }
       }
@@ -210,18 +211,6 @@ $nav-item-border: darken($navbar-default-bg, 8%);
       hyphens: auto;
       overflow-y: auto;
       max-height: 100vh;
-
-      span.glyphicon {
-        padding: 4px;
-        -webkit-text-stroke: 1px $navbar-default-bg;
-        line-height: 0.6;
-
-        &:hover {
-          background-color: #e2e2e2;
-          border-radius: 4px;
-          -webkit-text-stroke: 1px #e2e2e2;
-        }
-      }
     }
 
     .dropdown {
@@ -364,8 +353,9 @@ $nav-item-border: darken($navbar-default-bg, 8%);
       .menu-expander {
         margin-left: -33px;
 
-        .glyphicon {
+        .menu-expander-icon {
           margin-left: 5px;
+          transition: transform 150ms ease;
         }
       }
 
