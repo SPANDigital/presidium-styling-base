@@ -18,3 +18,9 @@
 ### Bugfix
 
 - Fixed a bug where transparent popups were obstructing the search bar, fixed general linting and fixed the font import address. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-7459
+
+## 2025-06-05
+
+### Bugfix
+
+- Fixed a bug where when searching from within a module, the search filters on the left render below the left navigation. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11071

@@ -31,7 +31,7 @@
   .toolbar-wrapper {
     min-height: 50px;
     background-color: $color-dark-grey;
-    z-index: $zindex-navbar;
+    z-index: $zindex-navbar-fixed;
     position: sticky;
     top: 0;
     padding: 0;
