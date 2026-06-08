@@ -19,6 +19,12 @@
 
 - Fixed a bug where transparent popups were obstructing the search bar, fixed general linting and fixed the font import address. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-7459
 
+## 2026-06-03
+
+### Feature
+
+- Remove Bootstrap glyphicons font/styles; add CSS rotation for new SVG nav chevron. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11023
+
 ## 2025-06-05
 
 ### Bugfix
