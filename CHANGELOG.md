@@ -24,3 +24,9 @@
 ### Feature
 
 - Remove Bootstrap glyphicons font/styles; add CSS rotation for new SVG nav chevron. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11023
+
+## 2025-06-05
+
+### Bugfix
+
+- Fixed a bug where when searching from within a module, the search filters on the left render below the left navigation. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11071
