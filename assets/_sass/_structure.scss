@@ -23,14 +23,22 @@
   }
 }
 
+html {
+  display: flex;
+}
+
+body {
+  flex: 1;
+}
+
 #presidium {
   display: flex;
   flex-flow: row;
   flex-direction: column;
 
   .toolbar-wrapper {
+    border-bottom: 1px solid var(--gray-200);
     min-height: 50px;
-    background-color: $color-dark-grey;
     z-index: $zindex-navbar-fixed;
     position: sticky;
     top: 0;
@@ -43,26 +51,14 @@
         display: none;
       }
 
-      width: 30px;
+      width: 48px;
+      padding-inline: 12px;
       top: 16px;
       left: 20px;
       z-index: 1;
       background-color: white;
       border-width: 0px;
-      border-bottom: 1px solid #3d3d3d;
       background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-
-      .icon-bar {
-        background-color: #777;
-        display: block;
-        width: 22px;
-        height: 2px;
-        border-radius: 1px;
-      }
-
-      .icon-bar + .icon-bar {
-        margin-top: 4px;
-      }
     }
 
     .presidium-enterprise {

@@ -30,3 +30,9 @@
 ### Bugfix
 
 - Fixed a bug where when searching from within a module, the search filters on the left render below the left navigation. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11071
+
+## 2025-06-26
+
+### Bugfix
+
+- Fixed styling of the menu icon, enforced full width layout and added border to toolbar to help prevent flickering when the toolbar loads. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-10689
