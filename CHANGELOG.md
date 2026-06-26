@@ -35,4 +35,4 @@
 
 ### Bugfix
 
-- Fixed styling of the menu icon, enforced full width layout and added border to toolbar to help prevent flickering when the toolbar loads. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-10689
+- Fixed menu icon styling, enforced a full-width layout, and added a bottom border to the toolbar to help prevent flickering when the toolbar loads. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-10689
