@@ -422,6 +422,10 @@ body {
             display: flex;
           }
 
+          li p {
+            margin-bottom: 0;
+          }
+
           &::before {
             display: flex;
             font-weight: 500;
