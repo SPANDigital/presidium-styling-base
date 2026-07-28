@@ -41,4 +41,4 @@
 
 ### Feature
 
-- Initial implemenation of dark mode and updated the module title bar to support dark mode @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11353
+- Initial implementation of dark mode and updated the module title bar to support dark mode @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11353
