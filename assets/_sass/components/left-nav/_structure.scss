@@ -39,11 +39,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
 }
 
 #presidium-navigation {
-  .dark & {
-    background: black;
-  }
-
-  background: white;
+  background: var(--background, white);
   min-width: 300px;
   max-width: 600px;
   z-index: $zindex-navbar;
