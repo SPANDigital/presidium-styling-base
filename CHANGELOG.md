@@ -36,3 +36,9 @@
 ### Bugfix
 
 - Fixed menu icon styling, enforced a full-width layout, and added a bottom border to the toolbar to help prevent flickering when the toolbar loads. @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-10689
+
+## 2026-07-28
+
+### Feature
+
+- Initial implementation of dark mode and updated the module title bar to support dark mode @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11353
