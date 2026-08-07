@@ -42,3 +42,13 @@
 ### Feature
 
 - Initial implementation of dark mode and updated the module title bar to support dark mode @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11353
+
+## 2026-08-07
+
+### Feature
+
+- Refreshed the typography scale: enlarged the h1-h5 sizes and bumped heading weights
+- Downsized headings inside the article wrapper so the article title leads the hierarchy
+- Corrected the article heading selectors that were never matching
+- Moved the default font color onto the `--foreground` variable so it follows dark mode.
+  @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11581
