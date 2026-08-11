@@ -113,10 +113,6 @@ body {
   h6,
   p {
     color: $primary-font-color;
-
-    .dark & {
-      color: var(--foreground, white);
-    }
   }
 
   h1 {

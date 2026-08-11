@@ -5,10 +5,10 @@
 // Presidium System level Variables
 
 //## Font, line-height, and color for body text, headings, and more.
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,600,700');
 
 // Base
-$prsdm-typography-default-font-color: $color-grey-1 !default;
+$prsdm-typography-default-font-color: var(--foreground, $color-off-black) !default;
 $prsdm-typography-secondary-font-color: $color-grey-2 !default;
 $prsdm-typography-base-font-family: 'Open Sans', sans-serif !default;
 $prsdm-typography-base-font-weight: 400 !default;
@@ -20,33 +20,33 @@ $prsdm-typography-html-font-size: 16px !default;
 
 // Headings
 $headings-font-family: $prsdm-typography-base-font-family !default;
-$prsdm-typography-heading-strong-font-weight: 600 !default;
-$prsdm-typography-heading-medium-font-weight: 500 !default;
+$prsdm-typography-heading-strong-font-weight: 700 !default;
+$prsdm-typography-heading-medium-font-weight: 600 !default;
 $prsdm-typography-heading-light-font-weight: 450 !default;
 
 // H1
-$presidium-typography-h1-line-height: 41px !default;
-$presidium-typography-h1-font-size: 34px !default;
-$presidium-typography-h1-font-weight: $prsdm-typography-heading-medium-font-weight !default;
+$presidium-typography-h1-line-height: 68px !default;
+$presidium-typography-h1-font-size: 56px !default;
+$presidium-typography-h1-font-weight: $prsdm-typography-heading-strong-font-weight !default;
 // H2
-$presidium-typography-h2-line-height: 32px !default;
-$presidium-typography-h2-font-size: 28px !default;
-$presidium-typography-h2-font-weight: $prsdm-typography-heading-medium-font-weight !default;
+$presidium-typography-h2-line-height: 48px !default;
+$presidium-typography-h2-font-size: 41px !default;
+$presidium-typography-h2-font-weight: $prsdm-typography-heading-strong-font-weight !default;
 // H3
-$presidium-typography-h3-line-height: 28px !default;
-$presidium-typography-h3-font-size: 24px !default;
-$presidium-typography-h3-font-weight: $prsdm-typography-heading-medium-font-weight !default;
+$presidium-typography-h3-line-height: 42px !default;
+$presidium-typography-h3-font-size: 34px !default;
+$presidium-typography-h3-font-weight: $prsdm-typography-heading-strong-font-weight !default;
 // H4
-$presidium-typography-h4-line-height: 24px !default;
-$presidium-typography-h4-font-size: 22px !default;
+$presidium-typography-h4-line-height: 40px !default;
+$presidium-typography-h4-font-size: 28px !default;
 $presidium-typography-h4-font-weight: $prsdm-typography-heading-medium-font-weight !default;
 // H5
-$presidium-typography-h5-line-height: 22px !default;
+$presidium-typography-h5-line-height: 28px !default;
 $presidium-typography-h5-font-size: 20px !default;
 $presidium-typography-h5-font-weight: $prsdm-typography-heading-medium-font-weight !default;
 // H6
-$presidium-typography-h6-line-height: 20px !default;
-$presidium-typography-h6-font-size: 18px !default;
+$presidium-typography-h6-line-height: 24px !default;
+$presidium-typography-h6-font-size: 17px !default;
 $presidium-typography-h6-font-weight: $prsdm-typography-heading-medium-font-weight !default;
 
 // Fonts
@@ -63,28 +63,17 @@ $padding-base-vertical: 8px !default;
 $padding-base-horizontal: 12px !default;
 $input-height-base: ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
 
+// Article heading scale
+// Headings inside the article wrapper are stepped down from the base scale
+// (h1 renders at h3, h2 at h4, h3 at h5, h4-h6 at h6) so that .article-title
+// stays the largest text on the page and in-body headings read as subordinate
+// to it. Without this, an authored h1 would compete with the page title and
+// flatten the hierarchy.
 .content-wrapper {
-  .presidium-content {
+  #presidium-content {
     .presidium-article-wrapper {
-      h1 .h1 {
-        font-family: $headings-font-family !important;
-        font-weight: $presidium-typography-h1-font-weight !important;
-        line-height: $presidium-typography-h1-line-height !important;
-        font-size: $presidium-typography-h1-font-size !important;
-        margin-top: ($line-height-computed / 2);
-        margin-bottom: ($line-height-computed / 2);
-      }
-
-      h2 .h2 {
-        font-family: $headings-font-family !important;
-        font-weight: $presidium-typography-h2-font-weight !important;
-        line-height: $presidium-typography-h2-line-height !important;
-        font-size: $presidium-typography-h2-font-size !important;
-        margin-top: ($line-height-computed / 2);
-        margin-bottom: ($line-height-computed / 2);
-      }
-
-      h3 .h3 {
+      h1,
+      .h1 {
         font-family: $headings-font-family !important;
         font-weight: $presidium-typography-h3-font-weight !important;
         line-height: $presidium-typography-h3-line-height !important;
@@ -93,31 +82,58 @@ $input-height-base: ($line-height-computed + ($padding-base-vertical * 2) + 2) !
         margin-bottom: ($line-height-computed / 2);
       }
 
-      h4 .h4 {
+      h2,
+      .h2 {
         font-family: $headings-font-family !important;
         font-weight: $presidium-typography-h4-font-weight !important;
         line-height: $presidium-typography-h4-line-height !important;
         font-size: $presidium-typography-h4-font-size !important;
-        margin-top: 0;
+        margin-top: ($line-height-computed / 2);
         margin-bottom: ($line-height-computed / 2);
       }
 
-      h5 .h5 {
+      h3,
+      .h3 {
         font-family: $headings-font-family !important;
         font-weight: $presidium-typography-h5-font-weight !important;
         line-height: $presidium-typography-h5-line-height !important;
         font-size: $presidium-typography-h5-font-size !important;
-        margin-top: 0;
+        margin-top: ($line-height-computed / 2);
         margin-bottom: ($line-height-computed / 2);
       }
 
-      h6 .h6 {
+      // The downsizing bottoms out at h6, so h4, h5 and h6 all land on the same
+      // values and are grouped here rather than repeated three times. If these
+      // levels ever need to be visually distinguished again, split this rule
+      // back into separate h4 / h5 / h6 blocks.
+      h4,
+      .h4,
+      h5,
+      .h5,
+      h6,
+      .h6 {
         font-family: $headings-font-family !important;
         font-weight: $presidium-typography-h6-font-weight !important;
         line-height: $presidium-typography-h6-line-height !important;
         font-size: $presidium-typography-h6-font-size !important;
         margin-top: 0;
         margin-bottom: ($line-height-computed / 2);
+      }
+
+      .article-title {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: $headings-font-family !important;
+          font-weight: $presidium-typography-h2-font-weight !important;
+          line-height: $presidium-typography-h2-line-height !important;
+          font-size: $presidium-typography-h2-font-size !important;
+          margin-top: ($line-height-computed / 2);
+          margin-bottom: ($line-height-computed / 2);
+        }
       }
     }
   }
