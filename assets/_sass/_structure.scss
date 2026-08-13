@@ -115,6 +115,15 @@ body {
     color: $primary-font-color;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    -webkit-font-smoothing: antialiased;
+  }
+
   h1 {
     font-family: $headings-font-family !important;
     font-weight: $presidium-typography-h1-font-weight !important;
