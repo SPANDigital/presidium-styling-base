@@ -52,3 +52,9 @@
 - Corrected the article heading selectors that were never matching
 - Moved the default font color onto the `--foreground` variable so it follows dark mode.
   @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11581
+
+## 2026-08-13
+
+### Bugfix
+
+- Scaled down heading sizes and added font smoothing @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11610
