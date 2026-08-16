@@ -1,5 +1,18 @@
 #presidium {
+  // Keep the module title bar in view while scrolling (PRSDM-10751) so the
+  // module/branch context and its share/actions stay reachable. It sticks
+  // directly below the sticky .toolbar-wrapper (min-height: 50px); on pages
+  // without that toolbar (non-enterprise) it sticks to the very top instead.
+  --module-title-bar-top: 50px;
+
+  &:not(:has(.toolbar-wrapper)) {
+    --module-title-bar-top: 0px;
+  }
+
   .module-title-bar {
+    position: sticky;
+    top: var(--module-title-bar-top);
+    z-index: $zindex-navbar - 1;
     width: 100%;
     display: flex;
     align-items: center;

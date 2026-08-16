@@ -45,8 +45,12 @@ $nav-item-border: darken($navbar-default-bg, 8%);
   z-index: $zindex-navbar;
   position: sticky;
   border-right: 0.5px solid $color-grey-3;
-  top: 0;
-  height: 100vh;
+  // Pin below the sticky toolbar + module title bar (PRSDM-10751). Previously
+  // top: 0 let the nav travel up to fill the space the non-sticky title bar left
+  // as it scrolled away; now the bar stays put, so the nav sits under it and the
+  // height is reduced to match. Offset = --module-title-bar-top + title bar height (48px).
+  top: calc(var(--module-title-bar-top, 50px) + 48px);
+  height: calc(100vh - var(--module-title-bar-top, 50px) - 48px);
   display: flex;
 
   @media (max-width: $grid-float-breakpoint) {
