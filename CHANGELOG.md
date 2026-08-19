@@ -58,3 +58,9 @@
 ### Bugfix
 
 - Scaled down heading sizes and added font smoothing @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11610
+
+## 2026-08-19
+
+### Feature
+
+- General styling updates to allow modules to support dark mode @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11369

@@ -26,7 +26,7 @@
   }
 
   .article-card {
-    background-color: $primary-fill-color;
+    background-color: $fill-primary;
 		transition: all 125ms ease-out;
 		padding: 16px;
     margin: 8px;
@@ -34,7 +34,7 @@
   }
 	/* Hover state */
 	.article-card:hover {
-		background-color: $secondary-fill-color;
+		background-color: $fill-secondary;
 	}
   
 }
@@ -134,7 +134,7 @@ ul.tags {
 
   .tag {
     display: inline-block;
-    background-color: #ececec;
+    background-color: $fill-secondary;
     border-radius: 3px;
     padding: 3px 8px 5px;
     margin-right: 0.5rem;

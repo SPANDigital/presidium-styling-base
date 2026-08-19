@@ -7,8 +7,8 @@
     height: 48px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: var(--background, #ffffff);
-    border-bottom: 1px solid var(--border, #e5e7eb);
+    background-color: $background;
+    border-bottom: 1px solid $border;
 
     .module-title-bar-brand {
       display: flex;
@@ -30,7 +30,7 @@
       font-size: 1.25rem;
       font-weight: $font-weight-medium;
       margin: 0 1rem 0 0;
-      color: var(--foreground, #111827);
+      color: $foreground;
       line-height: 41px;
       // Truncate brand name to prevent layout shift when space is constrained
       overflow: hidden;
@@ -41,9 +41,9 @@
     .quality-category-labels {
       font-size: 11px;
       padding: 2px 8px;
-      border: 1px solid var(--border, #d1d5db);
+      border: 1px solid $border;
       border-radius: 4px;
-      color: var(--muted-foreground, #374151);
+      color: $muted-foreground;
       background-color: transparent;
       font-weight: $font-weight-medium;
       line-height: 1.2;

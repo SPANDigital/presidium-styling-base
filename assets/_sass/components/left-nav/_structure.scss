@@ -39,12 +39,12 @@ $nav-item-border: darken($navbar-default-bg, 8%);
 }
 
 #presidium-navigation {
-  background: var(--background, white);
+  background: $background;
   min-width: 300px;
   max-width: 600px;
   z-index: $zindex-navbar;
   position: sticky;
-  border-right: 0.5px solid $color-grey-3;
+  border-right: 0.5px solid $border;
   top: 0;
   height: 100vh;
   display: flex;
@@ -57,7 +57,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
       position: fixed;
 
       .navbar {
-        background: white;
+        background: $background;
         overflow-x: hidden;
       }
     }
@@ -105,7 +105,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
       background-color: transparent;
 
       &:not(.open):hover {
-        background-color: $gray-lighter;
+        background-color: $sidebar-accent;
       }
 
       &.open {
@@ -181,7 +181,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
         flex-direction: column;
 
         .brand-name {
-          color: $color-dark-grey;
+          color: $sidebar-foreground;
           width: 100%;
           margin: 0;
         }
@@ -193,7 +193,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
         }
 
         .quality-category-labels {
-          color: $color-grey-2;
+          color: $muted-foreground;
           width: fit-content;
           position: relative;
         }
@@ -308,11 +308,11 @@ $nav-item-border: darken($navbar-default-bg, 8%);
             background-position: center;
 
             &:hover {
-              background-color: #e2e2e2;
+              background-color: $background-item-hover;
             }
 
             &:active {
-              background-color: #ababab;
+              background-color: $fill-tertiary;
             }
           }
 
@@ -337,15 +337,15 @@ $nav-item-border: darken($navbar-default-bg, 8%);
       &.active,
       .active {
         &.child {
-          background-color: $gray-lighter;
+          background-color: $sidebar-accent;
         }
 
         &.child > div > a,
         &.closed > div > a {
-          background-color: $gray-lighter;
+          background-color: $sidebar-accent;
 
           span {
-            -webkit-text-stroke: $gray-lighter;
+            -webkit-text-stroke: $sidebar-accent;
           }
         }
       }
@@ -366,7 +366,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
         overflow: hidden;
 
         a {
-          color: $navbar-default-link-color;
+          color: $sidebar-foreground;
         }
       }
     }
