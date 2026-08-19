@@ -223,7 +223,9 @@ body {
         display: block;
         position: relative;
         visibility: hidden;
-        scroll-margin-top: 50px;
+        // Clear the sticky toolbar + module title bar (PRSDM-10751) so anchored
+        // targets are not hidden behind the fixed header stack.
+        scroll-margin-top: var(--sticky-header-offset, 98px);
       }
 
       .article-title {
@@ -239,7 +241,7 @@ body {
         @include headings {
           margin: 0;
           padding: 0;
-          scroll-margin-top: 50px;
+          scroll-margin-top: var(--sticky-header-offset, 98px);
 
           &:hover {
             cursor: pointer;
@@ -410,7 +412,7 @@ body {
           text-transform: none;
           margin-top: 20px;
           margin-bottom: 10px;
-          scroll-margin-top: 50px;
+          scroll-margin-top: var(--sticky-header-offset, 98px);
         }
 
         .presidium-pro-tip,

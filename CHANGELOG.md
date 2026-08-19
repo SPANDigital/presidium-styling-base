@@ -63,4 +63,5 @@
 
 ### Feature
 
+- Keep the module title bar sticky below the toolbar while scrolling and pin the side nav beneath it. @FabioSol https://spandigital.atlassian.net/browse/PRSDM-10751
 - General styling updates to allow modules to support dark mode @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11369
