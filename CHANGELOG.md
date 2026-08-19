@@ -58,3 +58,9 @@
 ### Bugfix
 
 - Scaled down heading sizes and added font smoothing @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11610
+
+## 2026-08-19
+
+### Feature
+
+- Keep the module title bar sticky below the toolbar while scrolling and pin the side nav beneath it. @FabioSol https://spandigital.atlassian.net/browse/PRSDM-10751
