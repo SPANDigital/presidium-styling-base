@@ -11,6 +11,11 @@
 # Vendored Bootstrap (assets/_sass/bootstrap/) is excluded: it is third-party and is
 # overridden from a Presidium partial instead of being edited in place.
 #
+# Also excluded, because in both cases a literal is the correct thing to find there:
+#   - anything inside var(...) -- already tokenised, the literal is just the fallback
+#   - custom-property definitions (--token: <literal>), i.e. the light-value pins in
+#     _print.scss and _mermaid.scss
+#
 # Usage:
 #   .claude/skills/dark-mode/scripts/audit-colors.sh              # audit assets/
 #   .claude/skills/dark-mode/scripts/audit-colors.sh assets/_sass/components
@@ -62,6 +67,40 @@ function bucket(r, g, b, a,   hi, lo) {
   return "OTHER"
 }
 
+# Remove every name(...) span, honouring parentheses nested in the arguments.
+# A regex cannot do this: var(--token, rgba(255, 255, 255, 1)) nests, and a
+# var\([^()]*\) pattern does not merely mis-measure such a span, it fails to match it at
+# all -- leaving the whole thing in place for the rgba() scan to report the fallback as a
+# hardcoded literal. So the closing paren is found by counting depth instead.
+function strip_calls(s, name,   out, pat, i, n, depth, ch, before) {
+  out = ""
+  pat = name "("
+  while ((i = index(s, pat)) > 0) {
+    before = (i > 1) ? substr(s, i - 1, 1) : " "
+    # A longer identifier that merely ends in `name`, e.g. sidebar-var( -- not a call.
+    if (before ~ /[A-Za-z0-9_-]/) {
+      out = out substr(s, 1, i + length(pat) - 1)
+      s = substr(s, i + length(pat))
+      continue
+    }
+    # Keep the character before the call: the named-colour scan below splits on the
+    # first ":" to find the value side, so eating the colon of `color:var(--x)` would
+    # blind it to the rest of the line.
+    out = out substr(s, 1, i - 1) " "
+    i += length(pat)
+    depth = 1
+    n = length(s)
+    while (i <= n && depth > 0) {
+      ch = substr(s, i, 1)
+      if (ch == "(") depth++
+      else if (ch == ")") depth--
+      i++
+    }
+    s = substr(s, i)
+  }
+  return out s
+}
+
 function record(kind, why, tok,   key, dedupe) {
   key = FILENAME ":" FNR
   dedupe = key SUBSEP tok
@@ -79,15 +118,19 @@ function record(kind, why, tok,   key, dedupe) {
   # Ignore comment-only lines.
   if (trimmed ~ /^\/\// || trimmed ~ /^\*/ || trimmed ~ /^\/\*/) next
 
+  # A custom-property definition is where a literal belongs -- these are the light-value
+  # pins in _print.scss and _mermaid.scss, not colours awaiting migration.
+  if (trimmed ~ /^--[A-Za-z0-9-]+[ \t]*:/) next
+
   line = raw
   sub(/\/\/.*$/, "", line)          # strip trailing line comments
   gsub(/\/\*[^*]*\*\//, "", line)   # strip inline block comments
 
   # A literal already used as a var() fallback is done; remove those spans first.
-  while (match(line, /var\([^()]*\)/)) line = substr(line, 1, RSTART - 1) " " substr(line, RSTART + RLENGTH)
+  line = strip_calls(line, "var")
 
   # url() arguments are filenames (plus-white.svg), never colours.
-  while (match(line, /url\([^()]*\)/)) line = substr(line, 1, RSTART - 1) " " substr(line, RSTART + RLENGTH)
+  line = strip_calls(line, "url")
 
   # Literals passed into a Sass colour function cannot become var() as-is.
   blocked = (line ~ /(darken|lighten|mix|adjust-hue|saturate|desaturate|transparentize|fade-out|fade-in|rgba)\([^)]*(\$|#)/)
@@ -173,7 +216,10 @@ END {
 # many of these.
 # ---------------------------------------------------------------------------
 printf "\n===== GREYSCALE SASS VARIABLES : tokenise the definition, not each call site\n"
-{ grep -hoE '^\$[A-Za-z0-9_-]+:[^;]*#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})' "${FILES[@]}" 2>/dev/null || true; } \
+# The grep -v drops `$name: var(--token, #hex)`: already tokenised, same reasoning as the
+# var() strip above.
+{ grep -hE '^\$[A-Za-z0-9_-]+:' "${FILES[@]}" 2>/dev/null | grep -v 'var(' \
+    | grep -oE '^\$[A-Za-z0-9_-]+:[^;]*#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})' || true; } \
   | while IFS= read -r def; do
       name="${def%%:*}"
       hexpart="${def##*#}"
