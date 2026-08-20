@@ -64,3 +64,10 @@
 ### Bugfix
 
 - Raised the copy-link toast above the sticky header so it no longer slides in behind the toolbar. @yandisakat https://spandigital.atlassian.net/browse/PRSDM-11481
+
+## 2026-08-19
+
+### Feature
+
+- Keep the module title bar sticky below the toolbar while scrolling and pin the side nav beneath it. @FabioSol https://spandigital.atlassian.net/browse/PRSDM-10751
+- General styling updates to allow modules to support dark mode @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11369

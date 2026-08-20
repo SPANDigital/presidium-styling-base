@@ -10,7 +10,7 @@ Taken from : source: https://github.com/mojombo/tpw/blob/master/css/syntax.css
 This is css for code highlighting.
 */
 .highlight {
-  background: #fff;
+  background: $background;
 }
 
 .highlight .c {
@@ -205,3 +205,134 @@ This is css for code highlighting.
 .highlight .il {
   color: #099;
 } /* Literal.Number.Integer.Long */
+
+/*
+Dark palette for the Rouge theme above.
+
+That theme is a light-only Pygments port. .highlight now reads --background, which is
+near-black in dark mode, leaving the token colours above unreadable against it — so the
+ones that need it are restated here.
+
+Each colour keeps its light counterpart's hue and is lifted in lightness until it clears
+WCAG AA (4.5:1) against --background's dark value, rgba(10, 10, 10, 1); the measured
+ratio is noted per rule.
+
+Two groups are deliberately absent. Rules above that set only font-weight or font-style
+carry no colour: .k .o .kc .kd .kp .kr .ow .ge .gs. And these greys already clear AA
+unaltered, so the light rules stand: .c .cm .c1 (#998, 6.85:1), .cp .cs .gh .bp (#999,
+6.95:1), .go (#888, 5.58:1), .gu (#aaa, 8.52:1), .w (#bbb, 10.31:1).
+*/
+.dark .highlight {
+  /* Generic error and traceback — was #a00 */
+  .gr,
+  .gt {
+    color: #e72b2b; /* 4.52:1 */
+  }
+
+  /* Generic prompt, namespace — was #555 */
+  .gp,
+  .nn {
+    color: #797979; /* 4.53:1 */
+  }
+
+  /* Keyword type, class name — was #458 */
+  .kt,
+  .nc {
+    color: #5c76c1; /* 4.53:1 */
+  }
+
+  /* Numbers — was #099 */
+  .m,
+  .mf,
+  .mh,
+  .mi,
+  .mo,
+  .il {
+    color: #0f8a8a; /* 4.72:1 */
+  }
+
+  /* Strings — was #d14 */
+  .s,
+  .sb,
+  .sc,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .si,
+  .sx,
+  .s1 {
+    color: #e72656; /* 4.53:1 */
+  }
+
+  /* Attributes, constants, variables — was #008080 */
+  .na,
+  .no,
+  .nv,
+  .vc,
+  .vg,
+  .vi {
+    color: #0f8888; /* 4.61:1 */
+  }
+
+  /* Builtin name — was #0086b3 */
+  .nb {
+    color: #1382a8; /* 4.53:1 */
+  }
+
+  /* Entity name — was #800080 */
+  .ni {
+    color: #d418d4; /* 4.58:1 */
+  }
+
+  /* Exception and function names — was #900 */
+  .ne,
+  .nf {
+    color: #e82c2c; /* 4.53:1 */
+  }
+
+  /* Tag name — was #000080 */
+  .nt {
+    color: #6868ee; /* 4.53:1 */
+  }
+
+  /* String regex — was #009926 */
+  .sr {
+    color: #108c2e; /* 4.54:1 */
+  }
+
+  /* String symbol — was #990073 */
+  .ss {
+    color: #dc18ac; /* 4.51:1 */
+  }
+
+  /* error */
+  .err {
+    color: #eed3d3;
+    background-color: #381e1e; /* 10.78:1 against the band */
+  }
+
+  /* diff removed */
+  .gd {
+    color: #eed3d3;
+    background-color: #321b1b; /* 11.39:1 against the band */
+  }
+
+  /* diff removed, changed region */
+  .gd .x {
+    color: #eed3d3;
+    background-color: #5b2020; /* 8.92:1 against the band */
+  }
+
+  /* diff added */
+  .gi {
+    color: #d3eed3;
+    background-color: #1b321b; /* 11.20:1 against the band */
+  }
+
+  /* diff added, changed region */
+  .gi .x {
+    color: #d3eed3;
+    background-color: #205b20; /* 6.61:1 against the band */
+  }
+}

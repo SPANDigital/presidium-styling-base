@@ -11,3 +11,25 @@
   // Make the color of the text within the main nodes white
   color: white !important;
 }
+
+// A diagram is drawn once, in Mermaid's own JS theme, and never re-rendered on a theme
+// switch, so it has to stay light in both themes. Freezing the tokens at their light values
+// here keeps dark mode out of it — the same approach _print.scss takes, and light mode is
+// unaffected because these are the values already in force there. Values track
+// .claude/skills/dark-mode/references/tokens.md; keep them in sync.
+.mermaid {
+  --background: rgba(255, 255, 255, 1);
+  --foreground: rgba(10, 10, 10, 1);
+  --muted: rgba(236, 235, 233, 1);
+  --muted-foreground: rgba(115, 115, 115, 1);
+  --border: rgba(229, 229, 229, 1);
+  --link-default: rgba(0, 130, 126, 1);
+  --link-hover: rgba(0, 92, 89, 1);
+
+  // `color` is inherited already-resolved from the article, so the tokens above cannot
+  // reach it; the background has to be opaque because Mermaid's Gantt and pie fills are
+  // translucent and would otherwise composite the dark page into the diagram.
+  color: $foreground;
+  background-color: $background;
+  color-scheme: light;
+}

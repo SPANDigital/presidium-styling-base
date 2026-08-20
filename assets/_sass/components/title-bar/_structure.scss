@@ -1,14 +1,32 @@
 #presidium {
+  // Keep the module title bar in view while scrolling (PRSDM-10751) so the
+  // module/branch context and its share/actions stay reachable. It sticks
+  // directly below the sticky .toolbar-wrapper (min-height: 50px); on pages
+  // without that toolbar (non-enterprise) it sticks to the very top instead.
+  --module-title-bar-top: 50px;
+  --module-title-bar-height: 48px;
+
+  // Total height of the fixed header stack (toolbar offset + title bar). Reused by
+  // the left nav positioning and the in-page scroll offsets so they stay in sync.
+  --sticky-header-offset: calc(var(--module-title-bar-top) + var(--module-title-bar-height));
+
+  &:not(:has(.toolbar-wrapper)) {
+    --module-title-bar-top: 0px;
+  }
+
   .module-title-bar {
+    position: sticky;
+    top: var(--module-title-bar-top);
+    z-index: $zindex-navbar - 1;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 48px;
+    height: var(--module-title-bar-height);
     padding-left: 20px;
     padding-right: 20px;
-    background-color: var(--background, #ffffff);
-    border-bottom: 1px solid var(--border, #e5e7eb);
+    background-color: $background;
+    border-bottom: 1px solid $border;
 
     .module-title-bar-brand {
       display: flex;
@@ -30,7 +48,7 @@
       font-size: 1.25rem;
       font-weight: $font-weight-medium;
       margin: 0 1rem 0 0;
-      color: var(--foreground, #111827);
+      color: $foreground;
       line-height: 41px;
       // Truncate brand name to prevent layout shift when space is constrained
       overflow: hidden;
@@ -41,9 +59,9 @@
     .quality-category-labels {
       font-size: 11px;
       padding: 2px 8px;
-      border: 1px solid var(--border, #d1d5db);
+      border: 1px solid $border;
       border-radius: 4px;
-      color: var(--muted-foreground, #374151);
+      color: $muted-foreground;
       background-color: transparent;
       font-weight: $font-weight-medium;
       line-height: 1.2;

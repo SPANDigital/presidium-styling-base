@@ -1,0 +1,120 @@
+// Dark-mode overrides for vendored Bootstrap 3 surfaces.
+// assets/_sass/bootstrap/ is an unmodified upstream copy and is never edited in place.
+// Its colour variables cannot be tokenised either, because _variables.scss feeds most of
+// them through darken()/lighten(), which need a real colour at compile time.
+// So the Bootstrap-driven surfaces that Presidium pages actually render are re-declared
+// here instead. This partial MUST be imported after _sass/bootstrap/.
+// blockquote and table carry no colour declarations of their own — they pick these up
+// through `@extend .well` / `@extend .table-striped` / `@extend .table-bordered` in
+// _structure.scss, which is why they never show up in a grep of the Presidium partials.
+
+body {
+  color: $foreground;
+}
+
+hr {
+  border-top-color: $border;
+}
+
+.well {
+  background-color: $fill-primary;
+  border-color: $border;
+  color: $foreground;
+}
+
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  border-top-color: $border;
+}
+
+.table > thead > tr > th {
+  border-bottom-color: $border;
+}
+
+.table-bordered,
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > tfoot > tr > td {
+  border-color: $border;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: $muted;
+}
+
+// Translucent, so it composes over the zebra stripe rather than replacing it.
+.table-hover > tbody > tr:hover {
+  background-color: $background-item-hover;
+}
+
+// Floating layers. Bootstrap gives .dropdown-menu an rgba(0, 0, 0, 0.15) border, which
+// disappears against a dark surface, so it becomes a real line here.
+.popover,
+.dropdown-menu {
+  background-color: $popover;
+  border-color: $border;
+  color: $popover-foreground;
+}
+
+// Version selector and search filters.
+.form-control {
+  background-color: $background;
+  border-color: $input;
+  color: $foreground;
+
+  &::placeholder {
+    color: $muted-foreground;
+  }
+}
+
+.panel,
+.list-group-item,
+.modal-content,
+.thumbnail {
+  background-color: $card;
+  color: $card-foreground;
+}
+
+// .panel and .modal-content are deliberately absent: their default borders are transparent
+// and rgba(0, 0, 0, 0.2) respectively, and giving them a solid line is a visual change
+// beyond dark-mode support.
+.list-group-item,
+.thumbnail {
+  border-color: $border;
+}
+
+.breadcrumb {
+  background-color: $muted;
+}
+
+// Code blocks. The highlighter writes its colours as inline style attributes, which outrank
+// any rule here, so tokenising $pre-bg / $pre-border-color / $pre-color achieved nothing and
+// the block is inverted wholesale instead. One pass repaints the surface, the border and
+// every inline-styled span.
+.dark pre {
+  filter: invert(1);
+}
+
+// Inline code. --fill-primary is within a couple of points of Bootstrap's $code-bg
+// (#f9f2f4), so light mode only loses the faint pink cast. $code-color (#c7254e) is kept
+// for light but manages just 2.83:1 on the dark surface, so it is lifted below.
+code {
+  background-color: $fill-primary;
+}
+
+.dark code {
+  color: #ec547b; // 4.55:1 on rgba(39, 35, 29, 1); no token carries an inline-code colour
+}
+
+// Bootstrap's `pre code` reset is (0,0,2) and loses to `.dark code` at (0,1,1). Restate it,
+// or crimson leaks into every dark-mode code block.
+.dark pre code {
+  color: inherit;
+}
