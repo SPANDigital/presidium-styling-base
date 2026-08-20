@@ -59,6 +59,12 @@
 
 - Scaled down heading sizes and added font smoothing @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11610
 
+## 2026-08-17
+
+### Bugfix
+
+- Raised the copy-link toast above the sticky header so it no longer slides in behind the toolbar. @yandisakat https://spandigital.atlassian.net/browse/PRSDM-11481
+
 ## 2026-08-19
 
 ### Feature

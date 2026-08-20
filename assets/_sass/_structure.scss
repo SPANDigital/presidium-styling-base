@@ -614,7 +614,7 @@ body {
 .toast {
   top: -50px;
   position: fixed;
-  z-index: 1000;
+  z-index: $zindex-toast;
   opacity: 0;
   transition-property: opacity, top;
   transition-duration: 300ms;
