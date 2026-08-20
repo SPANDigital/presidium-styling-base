@@ -1,4 +1,89 @@
 @media print {
+  // If .dark is still on the document when the user prints, text resolves to near-white and
+  // most browsers drop backgrounds — the result is a blank page. Redefining the tokens back
+  // to their light values covers every rule at once, including whatever the host injects.
+  :root,
+  .dark {
+    --background: rgba(255, 255, 255, 1);
+    --foreground: rgba(10, 10, 10, 1);
+    --card: rgba(255, 255, 255, 1);
+    --card-foreground: rgba(10, 10, 10, 1);
+    --popover: rgba(255, 255, 255, 1);
+    --popover-foreground: rgba(10, 10, 10, 1);
+    --primary: rgba(13, 148, 136, 1);
+    --primary-foreground: rgba(255, 255, 255, 1);
+    --secondary: rgba(210, 255, 252, 1);
+    --secondary-foreground: rgba(23, 23, 23, 1);
+    --muted: rgba(236, 235, 233, 1);
+    --muted-foreground: rgba(115, 115, 115, 1);
+    --accent: rgba(219, 227, 231, 1);
+    --accent-foreground: rgba(23, 23, 23, 1);
+    --destructive: rgba(188, 47, 59, 1);
+    --destructive-foreground: rgba(252, 224, 222, 1);
+    --border: rgba(229, 229, 229, 1);
+    --input: rgba(229, 229, 229, 1);
+    --ring: rgba(163, 163, 163, 1);
+    --sidebar: rgba(250, 250, 250, 1);
+    --sidebar-foreground: rgba(10, 10, 10, 1);
+    --sidebar-primary: rgba(23, 23, 23, 1);
+    --sidebar-primary-foreground: rgba(250, 250, 250, 1);
+    --sidebar-accent: rgba(245, 245, 245, 1);
+    --sidebar-accent-foreground: rgba(23, 23, 23, 1);
+    --sidebar-border: rgba(229, 229, 229, 1);
+    --sidebar-ring: rgba(163, 163, 163, 1);
+    --notification: rgba(235, 93, 42, 1);
+    --fill-primary: rgba(246, 245, 244, 1);
+    --fill-secondary: rgba(236, 235, 233, 1);
+    --fill-tertiary: rgba(225, 222, 219, 1);
+    --fill-quaternary: rgba(181, 175, 166, 1);
+    --fill-quinary: rgba(39, 35, 29, 1);
+    --brand-secondary: rgba(248, 186, 77, 1);
+    --brand-tertiary: rgba(235, 93, 42, 1);
+    --success-foreground: rgba(0, 104, 47, 1);
+    --success-primary: rgba(66, 205, 113, 1);
+    --success-secondary: rgba(86, 222, 129, 1);
+    --success-tertiary: rgba(101, 235, 141, 1);
+    --success-quarternary: rgba(226, 255, 231, 1);
+    --warning-primary: rgba(245, 196, 0, 1);
+    --warning-secondary: rgba(255, 206, 38, 1);
+    --warning-tertiary: rgba(255, 218, 114, 1);
+    --warning-quarternary: rgba(255, 245, 216, 1);
+    --info-primary: rgba(69, 134, 205, 1);
+    --info-secondary: rgba(91, 156, 228, 1);
+    --info-tertiary: rgba(106, 172, 245, 1);
+    --info-quarternary: rgba(227, 240, 255, 1);
+    --destructive-secondary: rgba(213, 71, 79, 1);
+    --destructive-tertiary: rgba(238, 95, 99, 1);
+    --destructive-quarternary: rgba(252, 224, 222, 1);
+    --chart-1: rgba(106, 172, 245, 1);
+    --chart-2: rgba(101, 235, 141, 1);
+    --chart-3: rgba(230, 142, 205, 1);
+    --chart-4: rgba(255, 170, 71, 1);
+    --chart-5: rgba(180, 145, 247, 1);
+    --chart-6: rgba(255, 132, 92, 1);
+    --chart-7: rgba(96, 196, 191, 1);
+    --chart-8: rgba(255, 218, 114, 1);
+    --chart-9: rgba(159, 179, 187, 1);
+    --chart-10: rgba(70, 206, 244, 1);
+    --table-highlight-1: rgba(227, 240, 255, 1);
+    --table-highlight-2: rgba(199, 225, 255, 1);
+    --table-highlight-hover-1: rgba(231, 237, 239, 1);
+    --table-highlight-hover-2: rgba(219, 227, 231, 1);
+    --table-header-highlight-1: rgba(231, 237, 239, 1);
+    --table-header-highlight-2: rgba(219, 227, 231, 1);
+    --scale-5-1: rgba(4, 172, 83, 1);
+    --scale-5-2: rgba(86, 222, 129, 1);
+    --scale-5-3: rgba(255, 206, 38, 1);
+    --scale-5-4: rgba(249, 158, 42, 1);
+    --scale-5-5: rgba(213, 71, 79, 1);
+    --background-item-hover: rgba(0, 0, 0, 0.04);
+    --background-secondary: rgba(252, 231, 198, 1);
+    --link-default: rgba(0, 130, 126, 1);
+    --link-hover: rgba(0, 92, 89, 1);
+
+    color-scheme: light;
+  }
+
   #presidium-navigation {
     display: none;
   }

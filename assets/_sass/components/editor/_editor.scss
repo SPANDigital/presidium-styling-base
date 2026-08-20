@@ -76,9 +76,10 @@ body::after {
 }
 
 .editor-popup-panel {
+  border: 1px solid $border;
   border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 20%);
-  color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px 0px;
+  color: $popover-foreground;
   width: 419px;
   position: fixed;
   left: 50%;
@@ -105,7 +106,7 @@ body::after {
 .editor-popup-panel-loading {
   @extend .editor-popup-panel;
 
-  background-color: #777;
+  background-color: $popover;
 }
 
 .editor-popup-panel-error {
@@ -116,13 +117,13 @@ body::after {
   .ok-button {
     font-weight: normal;
     text-align: center;
-    color: black;
+    color: $popover-foreground;
     transition: background-color 0.01s;
     border-radius: 4px;
     height: 20px;
     margin: auto 0;
     border: none;
-    background-color: white;
+    background-color: $popover;
 
     &:hover {
       background-color: grey;
@@ -137,7 +138,7 @@ body::after {
 .editor-popup-panel-copy {
   @extend .editor-popup-panel;
 
-  background-color: #000;
+  background-color: $popover;
   grid-template-columns: 40px auto;
   width: auto;
 }
@@ -152,8 +153,11 @@ body::after {
 }
 
 .popup-copy-tick {
-  background-image: url('assets/svg/icon-validation-success.svg');
-  background-repeat: no-repeat;
+  mask-image: url('assets/svg/icon-validation-success.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: $popover-foreground;
   top: 0;
   left: 0;
   width: 20px;

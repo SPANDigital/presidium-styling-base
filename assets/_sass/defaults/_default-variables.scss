@@ -10,13 +10,11 @@ $brand-primary: #e49134 !default;
 $brand-info: #eb9110 !default;
 $brand-tint: rgba(254, 178, 70, 1) !default;
 $navbar-default-link-hover-color: $brand-info !default;
-$navbar-default-link-hover-bg: white !default;
+$navbar-default-link-hover-bg: var(--background, rgba(255, 255, 255, 1)) !default;
 $link-color: #e49134 !default;
-$primary-fill-color:    #F6F5F4;
-$secondary-fill-color: #ECEBE9;
 
 // Custom colors
-$color-grey: #333 !default;
+$color-grey: var(--foreground, rgba(10, 10, 10, 1)) !default;
 $color-grey-1: #555 !default;
 $color-grey-2: #777 !default;
 $color-grey-3: #bbb !default;
@@ -38,4 +36,85 @@ $gray: #666 !default; // #555
 $gray-light: lighten($gray-base, 60%) !default; // #999
 $gray-lighter: lighten($gray-base, 93.5%) !default; // #eee
 $navbar-default-bg: #eee !default;
-$border: #dadada !default;
+
+// Isambard theme tokens
+// Sass mirrors of the CSS custom properties the host application injects at runtime:
+// Each fallback below is the light value, so this repo still renders correctly where
+// the host injects nothing.
+$background: var(--background, rgba(255, 255, 255, 1)) !default;
+$foreground: var(--foreground, rgba(10, 10, 10, 1)) !default;
+$card: var(--card, rgba(255, 255, 255, 1)) !default;
+$card-foreground: var(--card-foreground, rgba(10, 10, 10, 1)) !default;
+$popover: var(--popover, rgba(255, 255, 255, 1)) !default;
+$popover-foreground: var(--popover-foreground, rgba(10, 10, 10, 1)) !default;
+$primary: var(--primary, rgba(13, 148, 136, 1)) !default;
+$primary-foreground: var(--primary-foreground, rgba(255, 255, 255, 1)) !default;
+$secondary: var(--secondary, rgba(210, 255, 252, 1)) !default;
+$secondary-foreground: var(--secondary-foreground, rgba(23, 23, 23, 1)) !default;
+$muted: var(--muted, rgba(236, 235, 233, 1)) !default;
+$muted-foreground: var(--muted-foreground, rgba(115, 115, 115, 1)) !default;
+$accent: var(--accent, rgba(219, 227, 231, 1)) !default;
+$accent-foreground: var(--accent-foreground, rgba(23, 23, 23, 1)) !default;
+$destructive: var(--destructive, rgba(188, 47, 59, 1)) !default;
+$destructive-foreground: var(--destructive-foreground, rgba(252, 224, 222, 1)) !default;
+$border: var(--border, rgba(229, 229, 229, 1)) !default;
+$input: var(--input, rgba(229, 229, 229, 1)) !default;
+$ring: var(--ring, rgba(163, 163, 163, 1)) !default;
+$radius: var(--radius, 0.625rem) !default;
+$sidebar: var(--sidebar, rgba(250, 250, 250, 1)) !default;
+$sidebar-foreground: var(--sidebar-foreground, rgba(10, 10, 10, 1)) !default;
+$sidebar-primary: var(--sidebar-primary, rgba(23, 23, 23, 1)) !default;
+$sidebar-primary-foreground: var(--sidebar-primary-foreground, rgba(250, 250, 250, 1)) !default;
+$sidebar-accent: var(--sidebar-accent, rgba(245, 245, 245, 1)) !default;
+$sidebar-accent-foreground: var(--sidebar-accent-foreground, rgba(23, 23, 23, 1)) !default;
+$sidebar-border: var(--sidebar-border, rgba(229, 229, 229, 1)) !default;
+$sidebar-ring: var(--sidebar-ring, rgba(163, 163, 163, 1)) !default;
+$notification: var(--notification, rgba(235, 93, 42, 1)) !default;
+$fill-primary: var(--fill-primary, rgba(246, 245, 244, 1)) !default;
+$fill-secondary: var(--fill-secondary, rgba(236, 235, 233, 1)) !default;
+$fill-tertiary: var(--fill-tertiary, rgba(225, 222, 219, 1)) !default;
+$fill-quaternary: var(--fill-quaternary, rgba(181, 175, 166, 1)) !default;
+$fill-quinary: var(--fill-quinary, rgba(39, 35, 29, 1)) !default;
+$brand-secondary: var(--brand-secondary, rgba(248, 186, 77, 1)) !default;
+$brand-tertiary: var(--brand-tertiary, rgba(235, 93, 42, 1)) !default;
+$success-foreground: var(--success-foreground, rgba(0, 104, 47, 1)) !default;
+$success-primary: var(--success-primary, rgba(66, 205, 113, 1)) !default;
+$success-secondary: var(--success-secondary, rgba(86, 222, 129, 1)) !default;
+$success-tertiary: var(--success-tertiary, rgba(101, 235, 141, 1)) !default;
+$success-quarternary: var(--success-quarternary, rgba(226, 255, 231, 1)) !default;
+$warning-primary: var(--warning-primary, rgba(245, 196, 0, 1)) !default;
+$warning-secondary: var(--warning-secondary, rgba(255, 206, 38, 1)) !default;
+$warning-tertiary: var(--warning-tertiary, rgba(255, 218, 114, 1)) !default;
+$warning-quarternary: var(--warning-quarternary, rgba(255, 245, 216, 1)) !default;
+$info-primary: var(--info-primary, rgba(69, 134, 205, 1)) !default;
+$info-secondary: var(--info-secondary, rgba(91, 156, 228, 1)) !default;
+$info-tertiary: var(--info-tertiary, rgba(106, 172, 245, 1)) !default;
+$info-quarternary: var(--info-quarternary, rgba(227, 240, 255, 1)) !default;
+$destructive-secondary: var(--destructive-secondary, rgba(213, 71, 79, 1)) !default;
+$destructive-tertiary: var(--destructive-tertiary, rgba(238, 95, 99, 1)) !default;
+$destructive-quarternary: var(--destructive-quarternary, rgba(252, 224, 222, 1)) !default;
+$chart-1: var(--chart-1, rgba(106, 172, 245, 1)) !default;
+$chart-2: var(--chart-2, rgba(101, 235, 141, 1)) !default;
+$chart-3: var(--chart-3, rgba(230, 142, 205, 1)) !default;
+$chart-4: var(--chart-4, rgba(255, 170, 71, 1)) !default;
+$chart-5: var(--chart-5, rgba(180, 145, 247, 1)) !default;
+$chart-6: var(--chart-6, rgba(255, 132, 92, 1)) !default;
+$chart-7: var(--chart-7, rgba(96, 196, 191, 1)) !default;
+$chart-8: var(--chart-8, rgba(255, 218, 114, 1)) !default;
+$chart-9: var(--chart-9, rgba(159, 179, 187, 1)) !default;
+$chart-10: var(--chart-10, rgba(70, 206, 244, 1)) !default;
+$table-highlight-1: var(--table-highlight-1, rgba(227, 240, 255, 1)) !default;
+$table-highlight-2: var(--table-highlight-2, rgba(199, 225, 255, 1)) !default;
+$table-highlight-hover-1: var(--table-highlight-hover-1, rgba(231, 237, 239, 1)) !default;
+$table-highlight-hover-2: var(--table-highlight-hover-2, rgba(219, 227, 231, 1)) !default;
+$table-header-highlight-1: var(--table-header-highlight-1, rgba(231, 237, 239, 1)) !default;
+$table-header-highlight-2: var(--table-header-highlight-2, rgba(219, 227, 231, 1)) !default;
+$scale-5-1: var(--scale-5-1, rgba(4, 172, 83, 1)) !default;
+$scale-5-2: var(--scale-5-2, rgba(86, 222, 129, 1)) !default;
+$scale-5-3: var(--scale-5-3, rgba(255, 206, 38, 1)) !default;
+$scale-5-4: var(--scale-5-4, rgba(249, 158, 42, 1)) !default;
+$scale-5-5: var(--scale-5-5, rgba(213, 71, 79, 1)) !default;
+$background-item-hover: var(--background-item-hover, rgba(0, 0, 0, 0.04)) !default;
+$background-secondary: var(--background-secondary, rgba(252, 231, 198, 1)) !default;
+$link-default: var(--link-default, rgba(0, 130, 126, 1)) !default;
+$link-hover: var(--link-hover, rgba(0, 92, 89, 1)) !default;

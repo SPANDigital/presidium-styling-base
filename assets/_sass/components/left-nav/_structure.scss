@@ -39,12 +39,12 @@ $nav-item-border: darken($navbar-default-bg, 8%);
 }
 
 #presidium-navigation {
-  background: var(--background, white);
+  background: $background;
   min-width: 300px;
   max-width: 600px;
   z-index: $zindex-navbar;
   position: sticky;
-  border-right: 0.5px solid $color-grey-3;
+  border-right: 0.5px solid $border;
   // Pin below the sticky toolbar + module title bar (PRSDM-10751). Previously
   // top: 0 let the nav travel up to fill the space the non-sticky title bar left
   // as it scrolled away; now the bar stays put, so the nav sits under it and the
@@ -61,7 +61,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
       position: fixed;
 
       .navbar {
-        background: white;
+        background: $background;
         overflow-x: hidden;
       }
     }
@@ -109,7 +109,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
       background-color: transparent;
 
       &:not(.open):hover {
-        background-color: $gray-lighter;
+        background-color: $sidebar-accent;
       }
 
       &.open {
@@ -185,7 +185,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
         flex-direction: column;
 
         .brand-name {
-          color: $color-dark-grey;
+          color: $sidebar-foreground;
           width: 100%;
           margin: 0;
         }
@@ -197,7 +197,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
         }
 
         .quality-category-labels {
-          color: $color-grey-2;
+          color: $muted-foreground;
           width: fit-content;
           position: relative;
         }
@@ -307,29 +307,41 @@ $nav-item-border: darken($navbar-default-bg, 8%);
             background-color: transparent;
             transition: background-color 0.05s;
             border-radius: 3px;
-            background-size: 12px 12px;
-            background-repeat: no-repeat;
-            background-position: center;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              mask-repeat: no-repeat;
+              mask-position: center;
+              mask-size: 12px 12px;
+              background-color: $muted-foreground;
+            }
 
             &:hover {
-              background-color: #e2e2e2;
+              background-color: $background-item-hover;
             }
 
             &:active {
-              background-color: #ababab;
+              background-color: $fill-tertiary;
             }
           }
 
           .add-icon {
             @extend .option-button;
 
-            background-image: url("assets/svg/plus.svg");
+            &::before {
+              mask-image: url("assets/svg/plus.svg");
+            }
           }
 
           .delete-icon {
             @extend .option-button;
 
-            background-image: url("assets/svg/trash.svg");
+            &::before {
+              mask-image: url("assets/svg/trash.svg");
+            }
           }
         }
       }
@@ -341,15 +353,15 @@ $nav-item-border: darken($navbar-default-bg, 8%);
       &.active,
       .active {
         &.child {
-          background-color: $gray-lighter;
+          background-color: $sidebar-accent;
         }
 
         &.child > div > a,
         &.closed > div > a {
-          background-color: $gray-lighter;
+          background-color: $sidebar-accent;
 
           span {
-            -webkit-text-stroke: $gray-lighter;
+            -webkit-text-stroke: $sidebar-accent;
           }
         }
       }
@@ -370,7 +382,7 @@ $nav-item-border: darken($navbar-default-bg, 8%);
         overflow: hidden;
 
         a {
-          color: $navbar-default-link-color;
+          color: $sidebar-foreground;
         }
       }
     }
