@@ -307,9 +307,17 @@ $nav-item-border: darken($navbar-default-bg, 8%);
             background-color: transparent;
             transition: background-color 0.05s;
             border-radius: 3px;
-            background-size: 12px 12px;
-            background-repeat: no-repeat;
-            background-position: center;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              mask-repeat: no-repeat;
+              mask-position: center;
+              mask-size: 12px 12px;
+              background-color: $muted-foreground;
+            }
 
             &:hover {
               background-color: $background-item-hover;
@@ -323,13 +331,17 @@ $nav-item-border: darken($navbar-default-bg, 8%);
           .add-icon {
             @extend .option-button;
 
-            background-image: url("assets/svg/plus.svg");
+            &::before {
+              mask-image: url("assets/svg/plus.svg");
+            }
           }
 
           .delete-icon {
             @extend .option-button;
 
-            background-image: url("assets/svg/trash.svg");
+            &::before {
+              mask-image: url("assets/svg/trash.svg");
+            }
           }
         }
       }

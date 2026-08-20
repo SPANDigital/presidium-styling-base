@@ -207,8 +207,11 @@ body {
     }
 
     .link-icon {
-      background-image: url('assets/svg/link-icon.svg');
-      fill: $gray-light;
+      mask-image: url('assets/svg/link-icon.svg');
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: contain;
+      background-color: $muted-foreground;
       width: 16px;
       height: 16px;
       display: block;
@@ -392,8 +395,11 @@ body {
         }
 
         .edit-icon {
-          background-image: url('assets/svg/edit-icon.svg');
-          fill: $gray-light;
+          mask-image: url('assets/svg/edit-icon.svg');
+          mask-repeat: no-repeat;
+          mask-position: center;
+          mask-size: contain;
+          background-color: $muted-foreground;
           width: 16px;
           height: 16px;
         }
