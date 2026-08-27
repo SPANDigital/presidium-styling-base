@@ -71,3 +71,12 @@
 
 - Keep the module title bar sticky below the toolbar while scrolling and pin the side nav beneath it. @FabioSol https://spandigital.atlassian.net/browse/PRSDM-10751
 - General styling updates to allow modules to support dark mode @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11369
+
+## 2026-08-26
+
+### Feature
+
+- Added dark mode logo images (`logo-dark.png` and `logo-dashboard-dark.png`)
+- Swapped the module title bar brand logo for its dark variant when dark mode is active
+- Forced the light logo in print output so the branding stays legible on paper.
+  @kelvinmanley https://spandigital.atlassian.net/browse/PRSDM-11356

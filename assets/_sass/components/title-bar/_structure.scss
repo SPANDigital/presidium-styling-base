@@ -44,6 +44,20 @@
       width: 100%;
     }
 
+    .brand-dark {
+      display: none;
+    }
+
+    :root.dark & {
+      .brand-light {
+        display: none;
+      }
+
+      .brand-dark {
+        display: block;
+      }
+    }
+
     .brand-name {
       font-size: 1.25rem;
       font-weight: $font-weight-medium;

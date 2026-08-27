@@ -91,4 +91,14 @@
   #presidium-container {
     margin-left: 0;
   }
+
+  :root.dark #presidium .module-title-bar {
+    .brand-light {
+      display: block;
+    }
+
+    .brand-dark {
+      display: none;
+    }
+  }
 }
