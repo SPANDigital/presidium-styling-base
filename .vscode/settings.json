@@ -1,0 +1,12 @@
+{
+  // Let stylelint own SCSS diagnostics; silence VSCode's built-in CSS linter.
+  "scss.validate": false,
+  "stylelint.validate": ["css", "scss"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // Keep Cmd/Ctrl+P and search on Presidium's own SCSS, not vendored Bootstrap.
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/assets/_sass/bootstrap/**": true,
+    "**/.git": true
+  }
+}

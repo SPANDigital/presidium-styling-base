@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Presidium: Regenerate STYLES.md",
+      "type": "shell",
+      "command": "python3",
+      "args": ["${workspaceFolder}/../gen_styles.py"],
+      "detail": "Rescan assets/_sass and rewrite the SCSS catalog (mixins, tokens, component classes).",
+      "problemMatcher": []
+    }
+  ]
+}
